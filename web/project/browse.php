@@ -64,7 +64,7 @@
       }
 
       echo '<div class="row pad">';
-      echo '<a href="cart3.php">Go To Cart</a>';
+      echo '<a href="cart.php">Go To Cart</a>';
       echo '</div>';
     ?>
 
