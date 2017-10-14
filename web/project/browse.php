@@ -86,7 +86,7 @@
         <button class="btn-lg btn-primary" onclick="addToCart('Assassins Creed Origin')">buy</button>
       </div>
       <div class="row pad">
-        <a href="cart3.php">Go To Cart</a>
+        <a href="cart.php">Go To Cart</a>
       </div>
 
     </div>
