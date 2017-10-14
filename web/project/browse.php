@@ -47,7 +47,7 @@
 
     <hr class="thick">
 
-    <!-- <?php
+    <?php
       $statement = $db->prepare("SELECT name, picture FROM games");
       $statement->execute();
       // Go through each result
@@ -66,12 +66,12 @@
       echo '<div class="row pad">';
       echo '<a href="cart3.php">Go To Cart</a>';
       echo '</div>';
-    ?> -->
+    ?>
 
-    <div class="col-xs-12 text-center">
+    <!-- <div class="col-xs-12 text-center">
       <div class="row pad">
         <img src="http://gameranx.com/wp-content/uploads/2017/03/Destiny-2-1080P-Wallpaper-1.jpg" alt="Destiny 2" height="270" width="480" class="img-responsive center-block">
-        <button class="btn-lg btn-primary" onclick="addToCart(Destiny 2)">Buy</button>
+        <button class="btn-lg btn-primary" onclick="addToCart('Destiny 2')">Buy</button>
       </div>
       <div class="row pad">
         <img src="http://www.logicalincrements.com/assets/img/articles/overwatch/maxresdefault.jpg" alt="OverWatch" height="270" width="480" class="img-responsive center-block">
@@ -87,7 +87,7 @@
       </div>
       <div class="row pad">
         <a href="cart.php">Go To Cart</a>
-      </div>
+      </div> -->
 
     </div>
   </body>
