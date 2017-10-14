@@ -54,8 +54,8 @@
         unset($value);
       ?>  
       <div class="row pad">
-        <a href="browse3.php">Shop some more!</a>
-        <a href="checkout3.php">Checkout</a>
+        <a href="browse.php">Shop some more!</a>
+        <a href="checkout.php">Checkout</a>
       </div>
     </div>
   </body>

@@ -55,7 +55,7 @@
         unset($value);
       ?>
 
-      <a href="browse3.php">Back to Shopping</a>
+      <a href="browse.php">Back to Shopping</a>
     </div>
 
   </body>

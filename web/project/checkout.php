@@ -57,7 +57,7 @@
           <input type="submit">
         </div>
       </form>
-      <a href="cart3.php">Back to cart</a>
+      <a href="cart.php">Back to cart</a>
     </div>
 
   </body>

@@ -59,7 +59,7 @@
         echo '<div class="col-xs-12 text-center">';
         echo '<div class="row pad">';
         echo '<img src="' . $row['picture'] . '" alt="' . $row['Title'] . '" height="270" width="480" class="img-responsive center-block">';
-        echo '<button class="btn-lg btn-primary" onclick="addToCart(' . $row['title'] . ')">Buy</button>';
+        echo '<button class="btn-lg btn-primary" onclick="addToCart(' . "$row[title]" . ')">Buy</button>';
         echo '</div>';
       }
 
