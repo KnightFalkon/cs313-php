@@ -58,7 +58,7 @@
         // name
         echo '<div class="col-xs-12 text-center">';
         echo '<div class="row pad">';
-        echo '<img src="' . $row['picture'] . '" alt="' . $row['Title'] . '" height="270" width="480" class="img-responsive center-block">';
+        echo '<img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="270" width="480" class="img-responsive center-block">';
         echo '<button class="btn-lg btn-primary" onclick="' . "addToCart('" . $row['name'] . "')" . '">delete</button>' . "\n";
         echo '</div>';
       }
