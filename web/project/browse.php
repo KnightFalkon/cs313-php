@@ -59,7 +59,7 @@
         echo '<div class="col-xs-12 text-center">';
         echo '<div class="row pad">';
         echo '<img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="270" width="480" class="img-responsive center-block">';
-        echo '<button class="btn-lg btn-primary" onclick="' . "addToCart('" . $row['name'] . "')" . '">delete</button>' . "\n";
+        echo '<button class="btn-lg btn-primary" onclick="' . "addToCart('" . $row['name'] . "')" . '">Buy</button>' . "\n";
         echo '</div>';
       }
 
@@ -67,27 +67,6 @@
       echo '<a href="cart.php">Go To Cart</a>';
       echo '</div>';
     ?>
-
-    <!-- <div class="col-xs-12 text-center">
-      <div class="row pad">
-        <img src="http://gameranx.com/wp-content/uploads/2017/03/Destiny-2-1080P-Wallpaper-1.jpg" alt="Destiny 2" height="270" width="480" class="img-responsive center-block">
-        <button class="btn-lg btn-primary" onclick="addToCart('Destiny 2')">Buy</button>
-      </div>
-      <div class="row pad">
-        <img src="http://www.logicalincrements.com/assets/img/articles/overwatch/maxresdefault.jpg" alt="OverWatch" height="270" width="480" class="img-responsive center-block">
-        <button class="btn-lg btn-primary" onclick="addToCart('OverWatch')">Buy</button>
-      </div>
-      <div class="row pad">
-        <img src="https://i.pinimg.com/originals/7c/93/e5/7c93e56c19abb0951c8c208bfbf158c3.jpg" alt="Middle Earth: Shadow of War" height="270" width="480" class="img-responsive center-block">
-        <button class="btn-lg btn-primary" onclick="addToCart('Middle Earth: Shadow of War')">buy</button>
-      </div>
-      <div class="row pad">
-        <img src="https://techraptor.net/wp-content/uploads/2017/06/ac-origins.png" alt="Assassin's Creed: Origin" height="270" width="480" class="img-responsive center-block">
-        <button class="btn-lg btn-primary" onclick="addToCart('Assassins Creed Origin')">buy</button>
-      </div>
-      <div class="row pad">
-        <a href="cart.php">Go To Cart</a>
-      </div> -->
 
     </div>
   </body>
