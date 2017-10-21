@@ -44,8 +44,8 @@
           $data = htmlspecialchars($data);
         }
 
-        $st = $db->prepare("INSERT INTO users (username, password, address, city, state, zip, payment_type, card_num, name) VALUES('temp', 'temp', $_REQUEST[street], $_REQUEST[city], $_REQUEST[state], $_REQUEST[zip], 'temp', 123456, $_REQUEST[name])");
-        $st->execute();
+        $st = $db->prepare("INSERT INTO users (username, password, address, city, state, zip, payment_type, card_num, name) VALUES(:username, :password, :address, :city, :state, :zip, :payment_type, :card_num, :name)");
+        $st->execute(array(':username' => 'tempun', ':password' => 'temppw', ':address' => $_REQUEST['street'], ':city' => $_REQUEST['city'], ':state' => $_REQUEST['state'], ':zip' => $_REQUEST['zip'], ':payment_type' => 'visa', ':card_num' => 123456789, ':name' => $_REQUEST['name']));
 
         echo "<h2>Will be sent to: </h2>";
         echo "<h4>" . $_REQUEST['name'] . "\n"
