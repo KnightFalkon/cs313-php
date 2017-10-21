@@ -76,27 +76,27 @@
         $zip = $_REQUEST['zip'];
         $name = $_REQUEST['name'];
         echo '2';
-        $query = 'INSERT INTO users(username, password, address, city, state, zip, payment_type, card_num, name) VALUES(:username, :password, :address, :city, :state, :zip, :payment_type, :card_num, :name)';
-        $statement = $db->prepare($query);
-        echo '3';
-        $statement->bindValue(':username', 'tempun');
-        $statement->bindValue(':password', 'temppw');
-        $statement->bindValue(':address', $street);
-        $statement->bindValue(':city', $city);
-        $statement->bindValue(':state', $state);
-        $statement->bindValue(':city', $city);
-        $statement->bindValue(':zip', $zip);     
-        $statement->bindValue(':payment_type', 'visa');
-        $statement->bindValue(':card_num', 1234567890);
-        $statement->bindValue(':name', $name);
-        echo '4';
-        $statement->execute();
+        // $query = 'INSERT INTO users(username, password, address, city, state, zip, payment_type, card_num, name) VALUES(:username, :password, :address, :city, :state, :zip, :payment_type, :card_num, :name)';
+        // $statement = $db->prepare($query);
+        // echo '3';
+        // $statement->bindValue(':username', 'tempun');
+        // $statement->bindValue(':password', 'temppw');
+        // $statement->bindValue(':address', $street);
+        // $statement->bindValue(':city', $city);
+        // $statement->bindValue(':state', $state);
+        // $statement->bindValue(':city', $city);
+        // $statement->bindValue(':zip', $zip);     
+        // $statement->bindValue(':payment_type', 'visa');
+        // $statement->bindValue(':card_num', 1234567890);
+        // $statement->bindValue(':name', $name);
+        // echo '4';
+        // $statement->execute();
         echo '5';
         
 
         foreach($_SESSION as $game) {
           echo '6';
-          $statement = $db->prepare("INSERT INTO transactions(game_id,user_id, purchase_date) VALUES((SELECT id FROM games WHERE name = '$game'), (SELECT id FROM users WHERE name = '$name'), current_date)");
+          $statement = $db->prepare("INSERT INTO transactions(game_id,user_id, purchase_date) VALUES((SELECT id FROM games WHERE name = '$game'), 3, current_date)");
           echo $game;
           $statement->execute();
           echo '7';
