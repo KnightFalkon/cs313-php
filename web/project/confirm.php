@@ -79,8 +79,8 @@
         $query = 'INSERT INTO users(username, password, address, city, state, zip, payment_type, card_num, name) VALUES(:username, :password, :address, :city, :state, :zip, :payment_type, :card_num, :name)';
         $statement = $db->prepare($query);
         echo '3';
-        $statement->bindValue(':username', 'tempun');
-        $statement->bindValue(':password', 'temppw');
+        $statement->bindValue(':username', $name);
+        $statement->bindValue(':password', $name);
         $statement->bindValue(':address', $street);
         $statement->bindValue(':city', $city);
         $statement->bindValue(':state', $state);
@@ -96,7 +96,7 @@
 
         foreach($_SESSION as $game) {
           echo '6';
-          $statement = $db->prepare("INSERT INTO transactions(game_id,user_id, purchase_date) VALUES((SELECT id FROM games WHERE name = '$game'), 3, current_date)");
+          $statement = $db->prepare("INSERT INTO transactions(game_id,user_id, purchase_date) VALUES((SELECT id FROM games WHERE name = '$game'), (SELECT id FROM users WHERE name = '$name'), current_date)");
           echo $game;
           $statement->execute();
           echo '7';
