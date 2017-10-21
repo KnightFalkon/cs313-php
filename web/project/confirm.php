@@ -61,7 +61,7 @@
         unset($value);
 
         foreach($_SESSION as $value) {
-          $st = $db->prepare("INSERT INTO transactions (user_id, game_id) VALUES(123456/*(SELECT id WHERE name = $_REQUEST[name])*/, (SELECT id WHERE name = $value))");
+          $st = $db->prepare("INSERT INTO transactions (user_id, game_id) VALUES(123456/*(SELECT id WHERE name = $_REQUEST[name])*/, (SELECT id WHERE name = $value), clock_timestamp())");
           $st->execute();
         }
       
