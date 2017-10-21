@@ -44,7 +44,7 @@
           $data = htmlspecialchars($data);
         }
 
-        $st = $db->prepare("INSERT INTO public.users (address, city, state, zip, name) VALUES($_REQUEST[street], $_REQUEST[city], $_REQUEST[state], $_REQUEST[zip], $_REQUEST[name])");
+        $st = $db->prepare("INSERT INTO users (address, city, state, zip, name) VALUES($_REQUEST[street], $_REQUEST[city], $_REQUEST[state], $_REQUEST[zip], $_REQUEST[name])");
         $st->execute();
 
         echo "<h2>Will be sent to: </h2>";
@@ -61,7 +61,7 @@
         unset($value);
 
         foreach($_SESSION as $value) {
-          $st = $db->prepare("INSERT INTO public.transactions (user_id, game_id) VALUES((SELECT id WHERE name = $_REQUEST[name]), (SELECT id WHERE name = $value))");
+          $st = $db->prepare("INSERT INTO transactions (user_id, game_id) VALUES((SELECT id WHERE name = $_REQUEST[name]), (SELECT id WHERE name = $value))");
           $st->execute();
         }
       
