@@ -53,6 +53,8 @@
         unset($value);
         unset($data);
 
+
+
         $street = $_REQUEST['street'];
         $city = $_REQUEST['city'];
         $state = $_REQUEST['state'];
@@ -78,6 +80,10 @@
           $statement->execute();
         }
 
+        foreach($_SESSION as $value) {
+          unset($_SESSION[$value]);
+        }
+        unset($value);
       ?>
 
       <a href="browse.php">Back to Shopping</a>
