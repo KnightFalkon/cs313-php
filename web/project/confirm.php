@@ -56,16 +56,16 @@
         unset($data);
 
         foreach($_SESSION as $value) {
-          unset($_SESSION[$value]);
+        $st = $db->prepare("INSERT INTO transactions (user_id, game_id, purchase_date) VALUES((SELECT id FROM games WHERE name = $value), (SELECT id FROM users WHERE name = 'tempnm'/*$_REQUEST[name]*/), current_date))");
+        $st->execute();
+        echo "ya";
         }
+    
         unset($value);
 
         foreach($_SESSION as $value) {
-          $st = $db->prepare("INSERT INTO transactions (user_id, game_id, purchase_date) VALUES((SELECT id FROM games WHERE name = $value), (SELECT id FROM users WHERE name = 'tempnm'/*$_REQUEST[name]*/), current_date))");
-          $st->execute();
-          echo "ya";
+          unset($_SESSION[$value]);
         }
-      
         unset($value);
       ?>
 
