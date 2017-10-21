@@ -1,0 +1,60 @@
+INSERT INTO games (name, description, msrb,rating,genre,stock,price,picture,system)
+VALUES (
+   'Destiny 2'
+  ,'Destiny 2 is an online-only multiplayer first-person shooter video game developed by       Bungie and published by Activision.'
+  ,'T'
+  ,4.8
+  ,'FPS/RPG'
+  ,7
+  ,59.99
+  ,'http://gameranx.com/wp-content/uploads/2017/03/Destiny-2-1080P-Wallpaper-1.jpg'
+  ,'Xbox One'
+);
+INSERT INTO games (name, description, msrb,rating,genre,stock,price,picture,system)
+VALUES (
+   'Overwatch'
+  ,'Overwatch is a mobaesque FPS with colorful characters that emphasises teamwork.'
+  ,'T'
+  ,4.7
+  ,'FPS'
+  ,10
+  ,39.99
+  ,'http://gameranx.com/wp-content/uploads/2016/02/overwatch-1080-Wallpaper-1.jpg'
+  ,'Xbox One'
+);
+INSERT INTO games (name, description, msrb,rating,genre,stock,price,picture,system)
+VALUES (
+   'Witcher 3'
+  ,'The Witcher 3 is the third installment of the record breaking RPG that has had fans going wild for years.  Join Geralt on his quest to once again save the world.'
+  ,'M'
+  ,5.0
+  ,'RPG'
+  ,20
+  ,30.00
+  ,'https://images2.alphacoders.com/600/thumb-1920-600255.jpg'
+  ,'Xbox One'
+);
+INSERT INTO games (name, description, msrb,rating,genre,stock,price,picture,system)
+VALUES (
+   'Star Wars BattleFront II'
+  ,'Were you let down by the first installment? Get ready to be let down again'
+  ,'T'
+  ,0.2
+  ,'FPS'
+  ,100
+  ,59.99
+  ,'https://i.redd.it/5ecwfdoht3ry.jpg'
+  ,'Xbox One'
+);
+INSERT INTO games (name, description, msrb,rating,genre,stock,price,picture,system)
+VALUES (
+   'Far Cry 5'
+  ,'Enjoy a new groundbreaking installment in the Far Cry series, set it america.'
+  ,'M'
+  ,4.5
+  ,'FPS'
+  ,3
+  ,59.99 
+  ,'https://i.ytimg.com/vi/mcq9Ci9uhEM/maxresdefault.jpg'
+  ,'Xbox One'
+);

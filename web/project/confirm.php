@@ -1,5 +1,8 @@
 <?php
   session_start();
+
+  require "dbConnect.php";
+  $db = get_db();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,6 +44,9 @@
           $data = htmlspecialchars($data);
         }
 
+        $st = $db->prepare("INSERT INTO public.users (address, city, state, zip, name) VALUES($_REQUEST[street], $_REQUEST[city], $_REQUEST[state], $_REQUEST[zip], $_REQUEST[name])");
+        $st->execute();
+
         echo "<h2>Will be sent to: </h2>";
         echo "<h4>" . $_REQUEST['name'] . "\n"
             . "<h4>" . $_REQUEST['street'] . "</h4>"
@@ -52,6 +58,13 @@
         foreach($_SESSION as $value) {
           unset($_SESSION[$value]);
         }
+        unset($value);
+
+        foreach($_SESSION as $value) {
+          $st = $db->prepare("INSERT INTO public.transactions (user_id, game_id) VALUES((SELECT id WHERE name = $_REQUEST[name]), (SELECT id WHERE name = $value))");
+          $st->execute();
+        }
+      
         unset($value);
       ?>
 

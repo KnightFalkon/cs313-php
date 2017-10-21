@@ -32,7 +32,7 @@
     ?>
     <div class="col-xs-12 text-center">    
       <h3>Input your information, so we can send you sweet games!</h3>
-      <form  action="confirm3.php" method="post">
+      <form  action="confirm.php" method="post">
         <div class="row pad">
           <label for="name">name:</label>
           <input type="text" name="name" id="name">
