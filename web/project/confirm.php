@@ -74,14 +74,10 @@
 
 
         foreach($_SESSION as $game) {
-          echo '6';
           $statement = $db->prepare("INSERT INTO transactions(game_id,user_id, purchase_date) VALUES((SELECT id FROM games WHERE name = '$game'), (SELECT id FROM users WHERE name = '$name'), current_date)");
-          echo $game;
           $statement->execute();
-          echo '7';
         }
 
-        echo'8';
       ?>
 
       <a href="browse.php">Back to Shopping</a>
