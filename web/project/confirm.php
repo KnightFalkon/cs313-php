@@ -44,8 +44,8 @@
           $data = htmlspecialchars($data);
         }
 
-        $st = $db->prepare("INSERT INTO users (username, password, address, city, state, zip, payment_type, card_num, name) VALUES(:username, :password, :address, :city, :state, :zip, :payment_type, :card_num, :name)");
-        $st->execute(array(':username' => 'tempun', ':password' => 'temppw', ':address' => $_REQUEST['street'], ':city' => $_REQUEST['city'], ':state' => $_REQUEST['state'], ':zip' => $_REQUEST['zip'], ':payment_type' => 'visa', ':card_num' => 123456789, ':name' => $_REQUEST['name']));
+        // $st = $db->prepare("INSERT INTO users (username, password, address, city, state, zip, payment_type, card_num, name) VALUES(:username, :password, :address, :city, :state, :zip, :payment_type, :card_num, :name)");
+        // $st->execute(array(':username' => 'tempun', ':password' => 'temppw', ':address' => $_REQUEST['street'], ':city' => $_REQUEST['city'], ':state' => $_REQUEST['state'], ':zip' => $_REQUEST['zip'], ':payment_type' => 'visa', ':card_num' => 123456789, ':name' => $_REQUEST['name']));
 
         echo "<h2>Will be sent to: </h2>";
         echo "<h4>" . $_REQUEST['name'] . "\n"
@@ -61,7 +61,7 @@
         unset($value);
 
         foreach($_SESSION as $value) {
-          $st = $db->prepare("INSERT INTO transactions (user_id, game_id, purchase_date) VALUES((SELECT id FROM games WHERE name = $value), (SELECT id FROM users WHERE name = $_REQUEST[name]), current_date))");
+          $st = $db->prepare("INSERT INTO transactions (user_id, game_id, purchase_date) VALUES((SELECT id FROM games WHERE name = $value), (SELECT id FROM users WHERE name = 'tempnm'/*$_REQUEST[name]*/), current_date))");
           $st->execute();
           echo "ya";
         }
