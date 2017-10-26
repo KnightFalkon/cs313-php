@@ -54,7 +54,7 @@
   <?php echo $_SESSION['error']; $_SESSION['error'] = "";?>
 
   <div class="col-xs-12 text-center">
-    <form action="updatePassword.php" method="post"></form>
+    <form action="updatePassword.php" method="post">
     <div class="row pad">
       <label for="oldPassword">Enter Old password</label>
       <input type="password" name="oldPassword">
@@ -70,6 +70,7 @@
     <div class="row pad">
       <input type="submit">      
     </div>
+    </form>
   </div>
 
   </body>
