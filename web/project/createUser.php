@@ -44,7 +44,7 @@ echo "3";
 require("dbConnect.php");
 $db = get_db();
 echo "4";
-$st = $db->prepare("SELECT username FROM week7.user WHERE username = '$username'");
+$st = $db->prepare("SELECT username FROM users WHERE username = '$username'");
 $st->execute();
 $count = (int)$st->rowCount();
 echo "4.5";
