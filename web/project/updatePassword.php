@@ -50,6 +50,7 @@
       $statement->execute();
       $_SESSION['error'] = "Password successfully changed.";
       header("Location: account.php");
+      //for the update
 			die(); 
 		}
 		else
