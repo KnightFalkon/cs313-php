@@ -23,16 +23,26 @@
 
   <body>
 
-    <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1>
+    <header>
+      <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1>
 
-    <hr class="thick">
+      <hr class="thick">
+    </header> 
     
     <?php
 
     ?>
     <div class="col-xs-12 text-center">    
       <h3>Input your information, so we can send you sweet games!</h3>
-      <form  action="confirm.php" method="post">
+      <form  action="createUser.php" method="post">
+      <div class="row pad">
+          <label for="username">username:</label>
+          <input type="text" name="username" id="username">
+        </div>
+        <div class="row pad">
+          <label for="password">password:</label>
+          <input type="password" name="password" id="password">
+        </div>
         <div class="row pad">
           <label for="name">name:</label>
           <input type="text" name="name" id="name">
@@ -52,6 +62,10 @@
         <div class="row pad">
           <label for="zip">Zip Code:</label>
           <input type="text" name="zip" id="zip">
+        </div>
+        <div class="row pad">
+          <label for="cardNum">Credit Card number (visa only):</label>
+          <input type="text" name="cardNum" id="cardNum">
         </div>
         <div class="row pad">
           <input type="submit">

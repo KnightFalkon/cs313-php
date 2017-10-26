@@ -37,7 +37,10 @@
   </head>
 
   <body>
-    <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1>
+    <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1></br>
+
+    <a href="browse.php" class="text-right">Shop some more!</a>
+    <a href="confirm.php" class="text-right">Purchase</a>
 
     <hr class="thick">
 
@@ -53,10 +56,6 @@
 
         unset($value);
       ?>  
-      <div class="row pad">
-        <a href="browse.php">Shop some more!</a>
-        <a href="checkout.php">Checkout</a>
-      </div>
     </div>
   </body>
 

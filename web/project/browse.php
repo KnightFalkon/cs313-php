@@ -3,6 +3,16 @@
 
   require "dbConnect.php";
   $db = get_db();
+
+  if (isset($_SESSION['username']))
+  {
+    $username = $_SESSION['username'];
+  }
+  else
+  {
+    header("Location: signup.php");
+    die();
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,9 +53,15 @@
 
   <body>
 
-    <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1>
+    <header>
+      <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1></br>
 
-    <hr class="thick">
+      <p class="text-right"><?php echo "Welcome " . $_SESSION['username']?></p>
+      <a href="cart.php" class="text-right">Go to cart</a>      
+
+      <hr class="thick">
+
+    </header>
 
     <?php
       $statement = $db->prepare("SELECT name, picture FROM games");
@@ -62,10 +78,6 @@
         echo '<button class="btn-lg btn-primary" onclick="' . "addToCart('" . $row['name'] . "')" . '">Buy</button>' . "\n";
         echo '</div>';
       }
-
-      echo '<div class="row pad">';
-      echo '<a href="cart.php">Go To Cart</a>';
-      echo '</div>';
     ?>
 
     </div>
