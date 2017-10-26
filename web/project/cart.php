@@ -48,6 +48,9 @@
       <h3>These are the items that are currently in your cart.</h3>
       <?php
         foreach($_SESSION as $value) {
+          if($value == $_SESSION['userid'] || $value == $_SESSION['username']) {
+            continue;
+          }
           echo "<div class='row'>";
           echo "<h3>$value</h3>";
           echo '<button class="btn-xs btn-primary" onclick="' . "deleteItem('" . "$value" . "')" . '">delete</button>' . "\n";
