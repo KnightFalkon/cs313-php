@@ -61,7 +61,7 @@
         <a href="account.php">Go to account</a>
         <a href="cart.php" class="text-right">Go to cart</a>
       </div>  
-      </br>
+      </br></br></br>
 
       <hr class="thick">
 
