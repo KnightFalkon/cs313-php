@@ -31,6 +31,7 @@
     
     <?php
       echo "<h1>$_SESSION[error]</h1>";
+      $_SESSION['error'] = "";
     ?>
     <div class="col-xs-12 text-center">    
       <h3>Input your information, so we can send you sweet games!</h3>

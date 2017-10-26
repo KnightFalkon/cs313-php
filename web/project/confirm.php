@@ -41,7 +41,7 @@
         echo "<h2>These items: </h2>";
 
         foreach($_SESSION as $value) {
-          if($value == $_SESSION['userid'] || $value == $_SESSION['username']) {
+          if($value == $_SESSION['userid'] || $value == $_SESSION['username'] || $game == $_SESSION['error']) {
             continue;
           }
 
@@ -67,7 +67,7 @@
 
 
         foreach($_SESSION as $game) {
-          if($game == $_SESSION['userid'] || $game == $_SESSION['username']) {
+          if($game == $_SESSION['userid'] || $game == $_SESSION['username'] || $game == $_SESSION['error']) {
             continue;
           }
           $query = 'INSERT INTO transactions (game_id, user_id, purchase_date) VALUES((SELECT id FROM games WHERE name = :game), (SELECT id FROM users WHERE username = :username), current_date)';
@@ -78,7 +78,7 @@
         }
 
         foreach($_SESSION as $value) {
-          if($value == $_SESSION['userid'] || $value == $_SESSION['username']) {
+          if($value == $_SESSION['userid'] || $value == $_SESSION['username'] || $game == $_SESSION['error']) {
             continue;
           }
           unset($_SESSION[$value]);

@@ -38,9 +38,7 @@
 
       <p class="text-right"><?php echo "Welcome " . $_SESSION['username']?></p>
       <div class="pull-right">
-        <a href="browse.php">Back to browse</a>
-        <a href="updateInfo.php">Update Info</a>
-        <a href="changePassword.php">Change Password</a>
+        <a href="account.php">Back to account</a>
       </div>  
       </br></br></br>
 
@@ -48,29 +46,26 @@
 
     </header>
 
-  <h1 class="text-center">Welcome to your account!</h1>
+  <h1 class="text-center">Change password</h1>
 
 
   <h4 class="text-center">Account Details</h4>
 
+  <?php echo $_SESSION['error']; $_SESSION['error'] = "";?>
+
   <div class="col-xs-12 text-center">
+    <form action="updatePassword.php" method="post"></form>
     <div class="row pad">
-      <label for="name"><?php echo "Name: " . $row['name'];?></label>
+      <label for="oldPassword">Enter Old password</label>
+      <input type="password" name="oldPassword">
     </div>
     <div class="row pad">
-      <label for="street"><?php echo "Street: " . $row['address'];?></label>
+      <label for="newPassword1">Enter new password: </label>
+      <input type="password" name="newPassword1">      
     </div>
     <div class="row pad">
-      <label for="city"><?php echo "City: " . $row['city'];?></label>
-    </div>
-    <div class="row pad">
-      <label for="state"><?php echo "State: " . $row['state'];?></label>
-    </div>
-    <div class="row pad">
-      <label for="zip"><?php echo "Zip Code: " . $row['zip'];?></label>
-    </div>
-    <div class="row pad">
-      <label for="cardNum"><?php echo "Visa Number: " . $row['card_num'];?></label>
+      <label for="newPassword2">Enter Again: </label>
+      <input type="password" name="newPassword2">      
     </div>
   </div>
 

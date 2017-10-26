@@ -48,7 +48,7 @@
       <h3>These are the items that are currently in your cart.</h3>
       <?php
         foreach($_SESSION as $value) {
-          if($value == $_SESSION['userid'] || $value == $_SESSION['username']) {
+          if($value == $_SESSION['userid'] || $value == $_SESSION['username'] || $game == $_SESSION['error']) {
             continue;
           }
           echo "<div class='row'>";
