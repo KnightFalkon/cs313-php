@@ -67,6 +67,9 @@
       <label for="newPassword2">Enter Again: </label>
       <input type="password" name="newPassword2">      
     </div>
+    <div class="row pad">
+      <input type="submit">      
+    </div>
   </div>
 
   </body>
