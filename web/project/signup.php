@@ -35,7 +35,7 @@
     <div class="col-xs-12 text-center">    
       <h3>Input your information, so we can send you sweet games!</h3>
       <form  action="createUser.php" method="post">
-      <div class="row pad">
+        <div class="row pad">
           <label for="username">username:</label>
           <input type="text" name="username" id="username" value="testing">
         </div>

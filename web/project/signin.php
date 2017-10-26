@@ -23,7 +23,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
 
 		if (password_verify($password, $hashedPasswordFromDB))
 		{
-      
+
       $_SESSION['username'] = $username;
       $_SESSION['userid'] = $userid;
       header("Location: browse.php");
@@ -45,6 +45,20 @@ if (isset($_POST['username']) && isset($_POST['password']))
 <html>
 <head>
 	<title>Sign In</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+
+  <link rel="stylesheet" href="browse3.css">
+  <!-- <script type="text/javascript" src="prove2.js"></script> -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
