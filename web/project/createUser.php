@@ -27,19 +27,19 @@ $zip = test_input($_POST['zip']);
 $cardNum = test_input($_POST['cardNum']);
 echo "2";
 
-if (!isset($username) || $username == ""
-  || !isset($password) || $password == ""
-  || !isset($name) || $naem == ""
-  || !isset($street) || $street == ""
-  || !isset($city) || $city == ""
-  || !isset($state) || $state == ""
-  || !isset($zip) || $zip == ""
-  || !isset($cardNum) || $cardNum == "")
-{
-  $_SESSION['error'] = "Try Again";
-  header("Location: signup.php");
-	die(); 
-}
+// if (!isset($username) || $username == ""
+//   || !isset($password) || $password == ""
+//   || !isset($name) || $naem == ""
+//   || !isset($street) || $street == ""
+//   || !isset($city) || $city == ""
+//   || !isset($state) || $state == ""
+//   || !isset($zip) || $zip == ""
+//   || !isset($cardNum) || $cardNum == "")
+// {
+//   $_SESSION['error'] = "Try Again";
+//   header("Location: signup.php");
+// 	die(); 
+// }
 echo "3";
 require("dbConnect.php");
 $db = get_db();
