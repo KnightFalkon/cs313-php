@@ -7,7 +7,7 @@
   <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
 
-  <link rel="stylesheet" href="browse3.css">
+  <link rel="stylesheet" href="browse.css">
   <!-- <script type="text/javascript" src="prove2.js"></script> -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  

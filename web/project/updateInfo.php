@@ -17,7 +17,7 @@ $userRow = $statement->fetch();
   <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
 
-  <link rel="stylesheet" href="browse3.css">
+  <link rel="stylesheet" href="browse.css">
   <!-- <script type="text/javascript" src="prove2.js"></script> -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
@@ -51,7 +51,7 @@ $userRow = $statement->fetch();
         </div>
         <div class="row pad">
           <label for="street">street:</label>
-          <input type="text" name="street" id="street" value="<?php echo $userRow['street'];?>">
+          <input type="text" name="street" id="street" value="<?php echo $userRow['address'];?>">
         </div>
         <div class="row pad">
           <label for="city">city:</label>
