@@ -45,7 +45,7 @@
 			
       $query = 'UPDATE USERS SET password = :password WHERE username = :username';
       $statement = $db->prepare($query);
-      $statement->bindValue(':username', $username);
+      $statement->bindValue(':username', $_SESSION['username']);
       $statement->bindValue(':password', $newPassword1);
       $statement->execute();
       $_SESSION['error'] = "Password successfully changed.";
