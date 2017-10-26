@@ -57,8 +57,10 @@
       <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1></br>
 
       <p class="text-right"><?php echo "Welcome " . $_SESSION['username']?></p>
-      <a href="account.php">Go to account</a>
-      <a href="cart.php" class="text-right">Go to cart</a>      
+      <div class="center">
+        <a href="account.php">Go to account</a>
+        <a href="cart.php" class="text-right">Go to cart</a>
+      </div>  
 
       <hr class="thick">
 
