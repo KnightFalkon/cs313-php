@@ -47,27 +47,27 @@ $userRow = $statement->fetch();
       <form  action="update.php" method="post">
         <div class="row pad">
           <label for="name">name:</label>
-          <input type="text" name="name" id="name" value="<?php $userRow['name']?>">
+          <input type="text" name="name" id="name" value="<?php echo $userRow['name'];?>">
         </div>
         <div class="row pad">
           <label for="street">street:</label>
-          <input type="text" name="street" id="street" value="<?php $userRow['street']?>">
+          <input type="text" name="street" id="street" value="<?php echo $userRow['street'];?>">
         </div>
         <div class="row pad">
           <label for="city">city:</label>
-          <input type="text" name="city" id="city" value="<?php $userRow['city']?>">
+          <input type="text" name="city" id="city" value="<?php echo $userRow['city'];?>">
         </div>
         <div class="row pad">
           <label for="state">State:</label>
-          <input type="text" name="state" id="state" value ="<?php $userRow['state']?>">
+          <input type="text" name="state" id="state" value ="<?php echo $userRow['state'];?>">
         </div>
         <div class="row pad">
           <label for="zip">Zip Code:</label>
-          <input type="text" name="zip" id="zip" value="<?php $userRow['zip']?>">
+          <input type="text" name="zip" id="zip" value="<?php echo $userRow['zip'];?>">
         </div>
         <div class="row pad">
           <label for="cardNum">Credit Card number (visa only):</label>
-          <input type="text" name="cardNum" id="cardNum" value="<?php $userRow['card_num']?>">
+          <input type="text" name="cardNum" id="cardNum" value="<?php echo $userRow['card_num'];?>">
         </div>
         <div class="row pad">
           <input type="submit">
