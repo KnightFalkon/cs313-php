@@ -36,6 +36,10 @@
         echo "<h2>These items: </h2>";
 
         foreach($_SESSION as $value) {
+          if($value == $_SESSION['userid'] || $value == $_SESSION['username']) {
+            continue;
+          }
+
           echo "<h4>$value</h4>";
         }
 
@@ -55,34 +59,25 @@
 
 
 
-        $street = $_REQUEST['street'];
-        $city = $_REQUEST['city'];
-        $state = $_REQUEST['state'];
-        $zip = $_REQUEST['zip'];
-        $name = $_REQUEST['name'];
-        $query = 'INSERT INTO users(username, password, address, city, state, zip, payment_type, card_num, name) VALUES(:username, :password, :address, :city, :state, :zip, :payment_type, :card_num, :name)';
-        $statement = $db->prepare($query);
-        $statement->bindValue(':username', $name);
-        $statement->bindValue(':password', $name);
-        $statement->bindValue(':address', $street);
-        $statement->bindValue(':city', $city);
-        $statement->bindValue(':state', $state);
-        $statement->bindValue(':city', $city);
-        $statement->bindValue(':zip', $zip);
-        $statement->bindValue(':payment_type', 'visa');
-        $statement->bindValue(':card_num', 1234567890);
-        $statement->bindValue(':name', $name);
-        $statement->execute();
-
 
         foreach($_SESSION as $game) {
-          $statement = $db->prepare("INSERT INTO transactions(game_id,user_id, purchase_date) VALUES((SELECT id FROM games WHERE name = '$game'), (SELECT id FROM users WHERE name = '$name'), current_date)");
+          if($value == $_SESSION['userid'] || $value == $_SESSION['username']) {
+            continue;
+          }
+          $query = 'INSERT INTO transaction (game_id, user_id, purchase_date) VALUES((SELECT id FROM games WHERE name = :game), (SELECT id FROM users WHERE username = :username), current_date)';
+          $statement = $db->prepare($query);
+          $statement->bindValue(':username', $_SESSION['username']);
+          $statement->bindValue(':game', $game);        
           $statement->execute();
         }
 
         foreach($_SESSION as $value) {
+          if($value == $_SESSION['userid'] || $value == $_SESSION['username']) {
+            continue;
+          }
           unset($_SESSION[$value]);
         }
+        unset($game);
         unset($value);
       ?>
 
