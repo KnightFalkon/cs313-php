@@ -57,15 +57,15 @@
     <form action="updatePassword.php" method="post">
     <div class="row pad">
       <label for="oldPassword">Enter Old password</label>
-      <input type="text" name="oldPassword">
+      <input type="password" name="oldPassword">
     </div>
     <div class="row pad">
       <label for="newPassword1">Enter new password: </label>
-      <input type="text" name="newPassword1">      
+      <input type="password" name="newPassword1">      
     </div>
     <div class="row pad">
       <label for="newPassword2">Enter Again: </label>
-      <input type="text" name="newPassword2">      
+      <input type="password" name="newPassword2">      
     </div>
     <div class="row pad">
       <input type="submit">      

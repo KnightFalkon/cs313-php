@@ -21,8 +21,7 @@
   $newPassword2 = test_input($_POST['newPassword2']);
 
   
-  if (!isset($username) || $username == ""
-    || !isset($password) || $password == ""
+  if (!isset($password) || $password == ""
     || !isset($newPassword1) || $newPassword1 == ""
     || !isset($newPassword2) || $newPassword2 == ""
     || $newPassword1 != $newPassword2)
