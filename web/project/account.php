@@ -33,20 +33,25 @@
 
   <body>
   
-  <header>
+    <header>
       <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1></br>
 
       <p class="text-right"><?php echo "Welcome " . $_SESSION['username']?></p>
-      <a href="cart.php" class="text-right">Go to cart</a>      
+      <div class="pull-right">
+        <a href="browse.php">Back to browse</a>
+        <a href="cart.php" class="text-right">Go to cart</a>
+      </div>  
+      </br></br></br>
 
       <hr class="thick">
-  </header>
+
+    </header>
 
   <h1 class="text-center">Welcome to your account!</h1>
 
 
   <h4 class="text-center">Account Details</h4>
-  <a href="updateInfo.php">Update Info</a>
+  <div class="pull-center"><a href="updateInfo.php">Update Info</a><div>
 
   <div class="col-xs-12 text-center">
     <div class="row pad">
