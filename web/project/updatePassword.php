@@ -48,6 +48,7 @@
       $statement->bindValue(':username', $username);
       $statement->bindValue(':password', $newPassword1);
       $statement->execute();
+      $_SESSION['error'] = "Password successfully changed.";
       header("Location: account.php");
 			die(); 
 		}
