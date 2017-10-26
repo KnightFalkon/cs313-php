@@ -3,6 +3,12 @@
 
   require "dbConnect.php";
   $db = get_db();
+
+  $query = 'SELECT * FROM users WHERE username=:username';
+	$statement = $db->prepare($query);
+	$statement->bindValue(':username', $_SESSION['username']);
+  $result = $statement->execute();
+  $userRow = $statement->fetch();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,10 +55,11 @@
           $data = htmlspecialchars($data);
         }
 
+        
         echo "<h2>Will be sent to: </h2>";
-        echo "<h4>" . $_REQUEST['name'] . "\n"
-            . "<h4>" . $_REQUEST['street'] . "</h4>"
-            . "<h4>" . $_REQUEST['city'] . ", " . $_REQUEST['state'] . " " . $_REQUEST['zip'] . "</h4>";
+        echo "<h4>" . $userRow['name'] . "\n"
+            . "<h4>" . $userRow['street'] . "</h4>"
+            . "<h4>" . $userRow['city'] . ", " . $userRow['state'] . " " . $userRow['zip'] . "</h4>";
 
         unset($value);
         unset($data);
@@ -64,7 +71,7 @@
           if($value == $_SESSION['userid'] || $value == $_SESSION['username']) {
             continue;
           }
-          $query = 'INSERT INTO transaction (game_id, user_id, purchase_date) VALUES((SELECT id FROM games WHERE name = :game), (SELECT id FROM users WHERE username = :username), current_date)';
+          $query = 'INSERT INTO transactions (game_id, user_id, purchase_date) VALUES((SELECT id FROM games WHERE name = :game), (SELECT id FROM users WHERE username = :username), current_date)';
           $statement = $db->prepare($query);
           $statement->bindValue(':username', $_SESSION['username']);
           $statement->bindValue(':game', $game);        
