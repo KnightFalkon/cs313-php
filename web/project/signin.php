@@ -1,29 +1,14 @@
 <?php
-/**********************************************************
-* File: signIn.php
-* Author: Br. Burton
-* 
-* Description: This page has a form for the user to sign in.
-*
-* In this case, to show another approach, we will have this
-* page have two purposes, it will have the form for signing
-* in, but it will also have the logic to check a username
-* and password and redirect the user to the home page if
-* everything checks out. Thus it will post to itself.
-***********************************************************/
-// If you have an earlier version of PHP (earlier than 5.5)
-// You need to download and include password.php.
-//require("password.php"); // used for password hashing.
+
 session_start();
 $badLogin = false;
-// First check to see if we have post variables, if not, just
-// continue on as always.
+
 if (isset($_POST['username']) && isset($_POST['password']))
 {
-	// they have submitted a username and password for us to check
+  echo '1';
 	$username = $_POST['username'];
-	$password = $_POST['password'];
-	// Connect to the DB
+  $password = $_POST['password'];
+  echo '2';
 	require("dbConnect.php");
 	$db = get_db();
 	$query = 'SELECT * FROM users WHERE username=:username';
@@ -31,18 +16,18 @@ if (isset($_POST['username']) && isset($_POST['password']))
 	$statement->bindValue(':username', $username);
 	$result = $statement->execute();
 	if ($result)
-	{
+	{ echo '3';
 		$row = $statement->fetch();
     $hashedPasswordFromDB = $row['password'];
     $userid = $row['id'];
-		// now check to see if the hashed password matches
+
 		if (password_verify($password, $hashedPasswordFromDB))
 		{
-			// password was correct, put the user on the session, and redirect to home
+      echo '4';
       $_SESSION['username'] = $username;
       $_SESSION['userid'] = $userid;
-			header("Location: browse.php");
-			die(); // we always include a die after redirects.
+      header("Location: browse.php");
+      
 		}
 		else
 		{
