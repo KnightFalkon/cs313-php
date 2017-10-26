@@ -33,7 +33,7 @@
 
   $query = 'SELECT password FROM users WHERE username = :username';
 	$statement = $db->prepare($query);
-	$statement->bindValue(':username', $username);
+	$statement->bindValue(':username', $_SESSION['username']);
 	$result = $statement->execute();
 	if ($result)
 	{
