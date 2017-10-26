@@ -38,7 +38,7 @@
       <form  action="createUser.php" method="post">
         <div class="row pad">
           <label for="username">username:</label>
-          <input type="text" name="username" id="username" value="testing">
+          <input type="text" name="username" id="username" value="testing34">
         </div>
         <div class="row pad">
           <label for="password">password:</label>
