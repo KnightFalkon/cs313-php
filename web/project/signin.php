@@ -2,10 +2,10 @@
 
 session_start();
 $badLogin = false;
-
+echo '.5';
 if (isset($_POST['username']) && isset($_POST['password']))
 {
-  echo '1';
+  echo "1";
 	$username = $_POST['username'];
   $password = $_POST['password'];
   echo '2';
