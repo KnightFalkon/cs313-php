@@ -47,7 +47,9 @@ echo "4";
 $st = $db->prepare("SELECT username FROM week7.user WHERE username = '$username'");
 $st->execute();
 $count = (int)$st->rowCount();
+echo "4.5";
 if ($count != 0) {
+  echo "4.6";
   $_SESSION['error'] = "Username is already being used";
   header("Location: signup.php");
 	die(); 
