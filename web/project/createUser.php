@@ -12,10 +12,10 @@ function test_input($data) {
 }
 
 echo "1";
-$username = $_POST['username'];
+// $username = $_POST['username'];
 echo "1.01";
-$username = test_inpu($_POST['username']);
-$password = test_inpu($_POST['password']);
+$username = test_input($_POST['username']);
+$password = test_input($_POST['password']);
 echo "1.1";
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 $name = test_input($_POST['name']);
