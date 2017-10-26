@@ -12,6 +12,8 @@ function test_input($data) {
 }
 
 echo "1";
+$username = $_POST['username'];
+echo "1.01";
 $username = test_inpu($_POST['username']);
 $password = test_inpu($_POST['password']);
 echo "1.1";
