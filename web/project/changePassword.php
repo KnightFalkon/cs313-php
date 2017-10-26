@@ -51,21 +51,21 @@
 
   <h4 class="text-center">Account Details</h4>
 
-  <?php echo $_SESSION['error']; $_SESSION['error'] = "";?>
+  <p class="text-center"><?php echo $_SESSION['error']; $_SESSION['error'] = "";?></p>
 
   <div class="col-xs-12 text-center">
     <form action="updatePassword.php" method="post">
     <div class="row pad">
       <label for="oldPassword">Enter Old password</label>
-      <input type="password" name="oldPassword">
+      <input type="text" name="oldPassword">
     </div>
     <div class="row pad">
       <label for="newPassword1">Enter new password: </label>
-      <input type="password" name="newPassword1">      
+      <input type="text" name="newPassword1">      
     </div>
     <div class="row pad">
       <label for="newPassword2">Enter Again: </label>
-      <input type="password" name="newPassword2">      
+      <input type="text" name="newPassword2">      
     </div>
     <div class="row pad">
       <input type="submit">      
