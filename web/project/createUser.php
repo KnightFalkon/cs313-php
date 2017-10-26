@@ -16,6 +16,7 @@ $username = test_inpu($_POST['username']);
 $password = test_inpu($_POST['password']);
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 $name = test_input($_POST['name']);
+echo "1.5";
 $street = test_input($_POST['street']);
 $city = test_input($_POST['city']);
 $state = test_input($_POST['state']);
