@@ -51,7 +51,7 @@
 
 
   <h4 class="text-center">Account Details</h4>
-  <div class="pull-center"><a href="updateInfo.php">Update Info</a><div>
+  <div class="center-block"><a href="updateInfo.php">Update Info</a><div>
 
   <div class="col-xs-12 text-center">
     <div class="row pad">
