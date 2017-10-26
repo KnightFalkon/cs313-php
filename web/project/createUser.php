@@ -69,3 +69,10 @@ $_SESSION['username'] = $username;
 header("Location: browse.php");
 die(); 
 ?>
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>hello</p>
+  </body>
+</html>
