@@ -2,13 +2,13 @@
 
 session_start();
 $badLogin = false;
-echo '.5';
+
 if (isset($_POST['username']) && isset($_POST['password']))
 {
-  echo "1";
+  
 	$username = $_POST['username'];
   $password = $_POST['password'];
-  echo '2';
+  
 	require("dbConnect.php");
 	$db = get_db();
 	$query = 'SELECT * FROM users WHERE username=:username';
@@ -16,14 +16,14 @@ if (isset($_POST['username']) && isset($_POST['password']))
 	$statement->bindValue(':username', $username);
 	$result = $statement->execute();
 	if ($result)
-	{ echo '3';
+	{ 
 		$row = $statement->fetch();
     $hashedPasswordFromDB = $row['password'];
     $userid = $row['id'];
 
 		if (password_verify($password, $hashedPasswordFromDB))
 		{
-      echo '4';
+      
       $_SESSION['username'] = $username;
       $_SESSION['userid'] = $userid;
       header("Location: browse.php");
