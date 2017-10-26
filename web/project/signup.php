@@ -72,7 +72,6 @@
           <input type="submit">
         </div>
       </form>
-      <a href="cart.php">Back to cart</a>
     </div>
 
   </body>

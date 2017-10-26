@@ -21,7 +21,7 @@ $cardNum = test_input($_POST['cardNum']);
 
 if (!isset($username) || $username == ""
   || !isset($password) || $password == ""
-  || !isset($name) || $naem == ""
+  || !isset($name) || $name == ""
   || !isset($street) || $street == ""
   || !isset($city) || $city == ""
   || !isset($state) || $state == ""
