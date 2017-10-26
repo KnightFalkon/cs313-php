@@ -10,7 +10,7 @@
   }
   else
   {
-    header("Location: signup.php");
+    header("Location: signin.php");
     die();
   }
 ?>
