@@ -50,22 +50,22 @@
 
   <div class="col-xs-12 text-center">
     <div class="row pad">
-      <label for="name"><?php echo "Name: " . $row['name']?></label>
+      <label for="name"><?php echo "Name: " . $row['name'];?></label>
     </div>
     <div class="row pad">
-      <label for="street"><?php echo "Street: " . $row['street']?></label>
+      <label for="street"><?php echo "Street: " . $row['address'];?></label>
     </div>
     <div class="row pad">
-      <label for="city"><?php echo "City: " . $row['city']?></label>
+      <label for="city"><?php echo "City: " . $row['city'];?></label>
     </div>
     <div class="row pad">
-      <label for="state"><?php echo "State: " . $row['state']?></label>
+      <label for="state"><?php echo "State: " . $row['state'];?></label>
     </div>
     <div class="row pad">
-      <label for="zip"><?php echo "Zip Code: " . $row['name']?></label>
+      <label for="zip"><?php echo "Zip Code: " . $row['zip'];?></label>
     </div>
     <div class="row pad">
-      <label for="cardNum"><?php echo "Visa Number: " . $row['card_num']?></label>
+      <label for="cardNum"><?php echo "Visa Number: " . $row['card_num'];?></label>
     </div>
   </div>
 

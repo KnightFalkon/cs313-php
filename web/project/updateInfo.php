@@ -46,10 +46,6 @@ $userRow = $statement->fetch();
       <h3>Update your information, so we can send you sweet games!</h3>
       <form  action="update.php" method="post">
         <div class="row pad">
-          <label for="username">username:</label>
-          <input type="text" name="username" id="username" value="<?php $userRow['username']?>">
-        </div>
-        <div class="row pad">
           <label for="name">name:</label>
           <input type="text" name="name" id="name" value="<?php $userRow['name']?>">
         </div>
