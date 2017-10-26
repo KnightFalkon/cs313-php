@@ -68,7 +68,7 @@
 
 
         foreach($_SESSION as $game) {
-          if($value == $_SESSION['userid'] || $value == $_SESSION['username']) {
+          if($game == $_SESSION['userid'] || $game == $_SESSION['username']) {
             continue;
           }
           $query = 'INSERT INTO transactions (game_id, user_id, purchase_date) VALUES((SELECT id FROM games WHERE name = :game), (SELECT id FROM users WHERE username = :username), current_date)';
