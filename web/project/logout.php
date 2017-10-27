@@ -1,6 +1,7 @@
 <?php
   session_start();
 
-  $_SESSION['username'] = "";
-  $_SESSION['userid'] = "";
+  unset($_SESSION['username']);
+  unset($_SESSION['userid']);
+  header('Location: browse.php')
 ?>
