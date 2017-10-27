@@ -41,7 +41,7 @@
         echo "<h2>These items: </h2>";
 
         foreach($_SESSION as $value) {
-          if($value == $_SESSION['userid'] || $value == $_SESSION['username'] || $game == $_SESSION['error']) {
+          if($value == $_SESSION['userid'] || $value == $_SESSION['username'] || $value == $_SESSION['error']) {
             continue;
           }
 
@@ -78,7 +78,7 @@
         }
 
         foreach($_SESSION as $value) {
-          if($value == $_SESSION['userid'] || $value == $_SESSION['username'] || $game == $_SESSION['error']) {
+          if($value == $_SESSION['userid'] || $value == $_SESSION['username'] || $value == $_SESSION['error']) {
             continue;
           }
           unset($_SESSION[$value]);
