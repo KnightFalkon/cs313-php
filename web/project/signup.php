@@ -24,10 +24,13 @@
   <body>
 
     <header>
-      <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1>
+      <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1></br>
+
+      <p class="text-right"><?php echo "Welcome " . $_SESSION['username']?></p>
 
       <hr class="thick">
-    </header> 
+
+    </header>
     
     <?php
       echo "<h1>$_SESSION[error]</h1>";

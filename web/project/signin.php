@@ -62,6 +62,15 @@ if (isset($_POST['username']) && isset($_POST['password']))
 </head>
 
 <body>
+
+  <header>
+    <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1></br>
+
+    <p class="text-right"><?php echo "Welcome " . $_SESSION['username']?></p>
+
+    <hr class="thick">
+
+  </header>
 <div>
 
 <?php

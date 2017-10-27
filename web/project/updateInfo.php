@@ -10,6 +10,16 @@ $statement = $db->prepare($query);
 $statement->bindValue(':username', $_SESSION['username']);
 $result = $statement->execute();
 $userRow = $statement->fetch();
+
+if (isset($_SESSION['username']))
+{
+  $username = $_SESSION['username'];
+}
+else
+{
+  header("Location: signin.php");
+  die();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,10 +44,20 @@ $userRow = $statement->fetch();
   <body>
 
     <header>
-      <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1>
+      <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1></br>
+
+      <p class="text-right"><?php echo "Welcome " . $_SESSION['username']?></p>
+      <div class="pull-right">
+        <a href="account.php">Back to account</a>
+        <a href="browse.php">Back to Browse</a>
+        <a href="logout.php">Logout</a>
+        
+      </div>  
+      </br></br></br>
 
       <hr class="thick">
-    </header> 
+
+    </header>
     
     <?php
       echo "<h1>$_SESSION[error]</h1>";

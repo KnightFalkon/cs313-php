@@ -50,7 +50,6 @@
       <div class="pull-right">
         <a href="browse.php">Back to browse</a>
         <a href="updateInfo.php">Update Info</a>
-        <a href="changePassword.php">Change Password</a>
       </div>  
       </br></br></br>
 

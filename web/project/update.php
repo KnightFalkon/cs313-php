@@ -25,16 +25,16 @@ $state = test_input($_POST['state']);
 $zip = test_input($_POST['zip']);
 $cardNum = test_input($_POST['cardNum']);
 
-if (!isset($name) || $name == ""
-  || !isset($street) || $street == ""
-  || !isset($city) || $city == ""
-  || !isset($state) || $state == ""
-  || !isset($zip) || $zip == ""
-  || !isset($cardNum) || $cardNum == "")
+if (!isset($name) || $name == "" || !is_string($name)
+|| !isset($street) || $street == "" || !is_string($street)
+|| !isset($city) || $city == "" || !is_string($city)
+|| !isset($state) || $state == "" || !is_string($state)
+|| !isset($zip) || $zip == "" || !is_int($zip)
+|| !isset($cardNum) || $cardNum == "" || !is_int($cardNum))
 {
-  $_SESSION['error'] = "Try Again";
-  header("Location: updateInfo.php");
-	die(); 
+$_SESSION['error'] = "Try Again";
+header("Location: updateInfo.php");
+die(); 
 }
 
 $query = 'UPDATE users SET address = :address, city = :city, state = :state, zip = :zip, card_num = :card_num, name = :name WHERE username = :username';
