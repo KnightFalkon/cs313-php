@@ -1,7 +1,9 @@
 <?php
   session_start();
 
-  unset($_SESSION['username']);
-  unset($_SESSION['userid']);
+  foreach($_SESSION as $value) {
+    unset($value);
+  }
+  unset($value);
   header('Location: browse.php')
 ?>
