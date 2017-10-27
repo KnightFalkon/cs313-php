@@ -87,7 +87,7 @@
   <h4 class="text-center">Here are all of the games you've bought!</h4>
 
   <?php
-  $query = 'SELECT g.name, t.purchase_date FROM transactions AS t INNER JOIN games AS g ON g.id = t.game_id WHERE t.user_id = :user_id';
+  $query = 'SELECT g.name FROM transactions AS t INNER JOIN games AS g ON g.id = t.game_id WHERE t.user_id = :user_id';
   $statement = $db->prepare($query);
   $statement->bindValue(':user_id', $_SESSION['userid']);
   $statement->execute();
@@ -95,7 +95,11 @@
   $row = $statement->fetch(PDO::FETCH_ASSOC);
 
   foreach($row as $value) {
-    echo "title" . $value['name'] . "date" . $value['purchase_date'];
+    echo '<div class="col-xs-12 text-center">';
+      echo '<div class="row pad">';
+        echo $value;
+      echo '</div>';
+    echo '</div>';
   }
 
   ?>
