@@ -7,6 +7,16 @@
 	$statement->bindValue(':username', $_SESSION['username']);
   $result = $statement->execute();
   $row = $statement->fetch();
+
+  if (isset($_SESSION['username']))
+  {
+    $username = $_SESSION['username'];
+  }
+  else
+  {
+    header("Location: signin.php");
+    die();
+  }
 ?>
 <!DOCTYPE html>
 <html>
