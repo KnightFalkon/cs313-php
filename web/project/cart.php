@@ -51,6 +51,7 @@
 
       <p class="text-right"><?php echo "Welcome " . $_SESSION['username']?></p>
       <div class="pull-right">
+        <a href="confirm.php">Purchase</a>
         <a href="account.php">Go to account</a>
         <a href="browse.php">Back to Browse</a>
         <a href="logout.php">Logout</a>
