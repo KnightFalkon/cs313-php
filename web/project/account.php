@@ -85,7 +85,7 @@
   $row = $statement->fetch();
 
   foreach($row as $value) {
-    echo "title" . $value['title'] . " and purchase date " . $value['day'];
+    echo "title" . $value;
   }
 
   ?>
