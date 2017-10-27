@@ -38,35 +38,35 @@
       <form  action="createUser.php" method="post">
         <div class="row pad">
           <label for="username">username:</label>
-          <input type="text" name="username" id="username" value="testing34">
+          <input type="text" name="username" id="username">
         </div>
         <div class="row pad">
           <label for="password">password:</label>
-          <input type="password" name="password" id="password" value="yolo">
+          <input type="password" name="password" id="password">
         </div>
         <div class="row pad">
           <label for="name">name:</label>
-          <input type="text" name="name" id="name" value="joseph">
+          <input type="text" name="name" id="name">
         </div>
         <div class="row pad">
           <label for="street">street:</label>
-          <input type="text" name="street" id="street" value="test street">
+          <input type="text" name="street" id="street">
         </div>
         <div class="row pad">
           <label for="city">city:</label>
-          <input type="text" name="city" id="city" value="test city">
+          <input type="text" name="city" id="city">
         </div>
         <div class="row pad">
           <label for="state">State:</label>
-          <input type="text" name="state" id="state" value ="test state">
+          <input type="text" name="state" id="state">
         </div>
         <div class="row pad">
           <label for="zip">Zip Code:</label>
-          <input type="text" name="zip" id="zip" value="4556">
+          <input type="text" name="zip" id="zip">
         </div>
         <div class="row pad">
           <label for="cardNum">Credit Card number (visa only):</label>
-          <input type="text" name="cardNum" id="cardNum" value="4556">
+          <input type="text" name="cardNum" id="cardNum">
         </div>
         <div class="row pad">
           <input type="submit">
