@@ -78,7 +78,7 @@
 
   <?php
   echo '.1';
-  $query = 'SELECT g.name AS title, g.purchase_date as day FROM transactions AS t INNER JOIN games AS g ON g.id = t.game_id WHERE t.user_id = :user_id';
+  $query = 'SELECT g.name AS title, t.purchase_date as day FROM transactions AS t INNER JOIN games AS g ON g.id = t.game_id WHERE t.user_id = :user_id';
   $statement = $db->prepare($query);
   $statement->bindValue(':user_id', $_SESSION['userid']);
   $statement->execute();
