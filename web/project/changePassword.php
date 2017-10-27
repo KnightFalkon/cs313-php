@@ -7,8 +7,6 @@
 	$statement->bindValue(':username', $_SESSION['username']);
   $result = $statement->execute();
   $row = $statement->fetch();
-
-  $_SESSION['error'] = "";
 ?>
 <!DOCTYPE html>
 <html>
@@ -75,4 +73,5 @@
     </form>
   </div>
 
+  <?php $_SESSION['error'] = ""; ?>
   </body>
