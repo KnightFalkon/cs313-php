@@ -9,9 +9,9 @@
   $row = $statement->fetch();
 
   function test_input($data) {
-    // $data = trim($data);
-    // $data = stripslashes($data);
-    // $data = htmlspecialchars($data);
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
     return $data;
   }
   
@@ -35,7 +35,7 @@
 	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $_SESSION['username']);
 	$result = $statement->execute();
-	if (true)
+	if ($result)
 	{
 		$row = $statement->fetch();
 		$hashedPasswordFromDB = $row['password'];
