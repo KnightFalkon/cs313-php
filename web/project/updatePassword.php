@@ -42,24 +42,26 @@
 		
 		if (password_verify($password, $hashedPasswordFromDB))
 		{
+      $newHashedPassword = password_hash($password, PASSWORD_DEFAULT);
 			
-      $query = 'UPDATE USERS SET password = :password WHERE username = :username';
+      $query = 'UPDATE users SET password = :password WHERE username = :username';
       $statement = $db->prepare($query);
       $statement->bindValue(':username', $_SESSION['username']);
-      $statement->bindValue(':password', password_hash($password, PASSWORD_DEFAULT));
+      $statement->bindValue(':password', $newHashedPassword);
       $statement->execute();
       $_SESSION['error'] = "Password successfully changed.";
       header("Location: account.php");
-      //for the update
 			die(); 
 		}
 		else
 		{
-			$_SESSION['Error'] = "Incorrect Password";
+      $_SESSION['Error'] = "Incorrect Password";
+      header("Location: changePassword.php");
 		}
 	}
 	else
 	{
     $_SESSION['Error'] = "Incorrect Password";
+    header("Location: changePassword.php");
 	}
 ?>
