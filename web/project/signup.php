@@ -34,6 +34,8 @@
 
       <a href="signin.php" class="pull-right">Back to Sign-in</a>
 
+      </br></br></br>
+
       <hr class="thick">
 
     </header>

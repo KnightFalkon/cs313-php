@@ -68,6 +68,8 @@ if (isset($_POST['username']) && isset($_POST['password']))
 
     <a href="signup.php" class="pull-right">Sign up</a>
 
+    </br></br></br>
+
     <hr class="thick">
 
   </header>
