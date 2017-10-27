@@ -66,7 +66,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
   <header>
     <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1></br>
 
-    <a href="signup.php">Sign up</a>
+    <a href="signup.php" class="pull-right">Sign up</a>
 
     <hr class="thick">
 

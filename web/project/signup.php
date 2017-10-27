@@ -32,7 +32,7 @@
     <header>
       <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1></br>
 
-      <a href="signin.php">Back to Sign-in</a>
+      <a href="signin.php" class="pull-right">Back to Sign-in</a>
 
       <hr class="thick">
 
