@@ -68,27 +68,27 @@ else
       <form  action="update.php" method="post">
         <div class="row pad">
           <label for="name">name:</label>
-          <input type="text" name="name" id="name" value="<?php echo $userRow['name'];?>">
+          <input type="text" name="name" id="name" value="<?php echo $userRow['name'];?>" pattern="^[a-z*A-Z*]{1,50}$" title="You sure that is your name??">
         </div>
         <div class="row pad">
           <label for="street">street:</label>
-          <input type="text" name="street" id="street" value="<?php echo $userRow['address'];?>">
+          <input type="text" name="street" id="street" value="<?php echo $userRow['address'];?>" pattern="^[a-z*A-Z*0-9*\s]{1,100}$" title="You sure that is your street?">
         </div>
         <div class="row pad">
           <label for="city">city:</label>
-          <input type="text" name="city" id="city" value="<?php echo $userRow['city'];?>">
+          <input type="text" name="city" id="city" value="<?php echo $userRow['city'];?>" pattern="^[a-z*A-Z*\s]{1,100}$" title="You sure that is your city?">
         </div>
         <div class="row pad">
           <label for="state">State:</label>
-          <input type="text" name="state" id="state" value ="<?php echo $userRow['state'];?>">
+          <input type="text" name="state" id="state" value ="<?php echo $userRow['state'];?>" pattern="^[A-Z*]{2}$" title="Make sure to use your states capitalized two letter code">
         </div>
         <div class="row pad">
           <label for="zip">Zip Code:</label>
-          <input type="text" name="zip" id="zip" value="<?php echo $userRow['zip'];?>">
+          <input type="text" name="zip" id="zip" value="<?php echo $userRow['zip'];?>" pattern="^[0-9*]{5}$" title="You sure that is your Zip Code?">
         </div>
         <div class="row pad">
           <label for="cardNum">Credit Card number (visa only):</label>
-          <input type="text" name="cardNum" id="cardNum" value="<?php echo $userRow['card_num'];?>">
+          <input type="text" name="cardNum" id="cardNum" value="<?php echo $userRow['card_num'];?>" pattern="^[0-9*]{16}$" title="You sure that is your Card Number? Do not use dashes.">
         </div>
         <div class="row pad">
           <input type="submit">

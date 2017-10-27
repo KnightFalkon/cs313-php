@@ -19,6 +19,12 @@
 
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+  <script>
+    function testInput() {
+      
+    }
+  </script>
+
   </head>
 
   <body>
@@ -41,35 +47,35 @@
       <form  action="createUser.php" method="post">
         <div class="row pad">
           <label for="username">username:</label>
-          <input type="text" name="username" id="username">
+          <input type="text" name="username" id="username" pattern="^[-!$#@%^*()_+|~=`{}\[\]:;<>?,.\/a-zA-Z0-9*_-]{5,20}$" title="5-20 characters, supports most symbols">
         </div>
         <div class="row pad">
           <label for="password">password:</label>
-          <input type="password" name="password" id="password">
+          <input type="password" name="password" id="password" pattern="^[-!$#@%^*()_+|~=`{}\[\]:;<>?,.\/a-zA-Z0-9*_-]{5,20}$" title="5-20 characters, supports most symbols">
         </div>
         <div class="row pad">
           <label for="name">name:</label>
-          <input type="text" name="name" id="name">
+          <input type="text" name="name" id="name" pattern="^[a-z*A-Z*\s]{1,50}$" title="You sure that is your name??">
         </div>
         <div class="row pad">
           <label for="street">street:</label>
-          <input type="text" name="street" id="street">
+          <input type="text" name="street" id="street" pattern="^[a-z*A-Z*0-9*\s]{1,100}$" title="You sure that is your street?">
         </div>
         <div class="row pad">
           <label for="city">city:</label>
-          <input type="text" name="city" id="city">
+          <input type="text" name="city" id="city" pattern="^[a-z*A-Z*\s]{1,100}$" title="You sure that is your city?">
         </div>
         <div class="row pad">
           <label for="state">State:</label>
-          <input type="text" name="state" id="state">
+          <input type="text" name="state" id="state" pattern="^[A-Z*]{2}$" title="Make sure to use your states capitalized two letter code">
         </div>
         <div class="row pad">
           <label for="zip">Zip Code:</label>
-          <input type="text" name="zip" id="zip">
+          <input type="text" name="zip" id="zip" pattern="^[0-9*]{5}$" title="You sure that is your Zip Code?">
         </div>
         <div class="row pad">
           <label for="cardNum">Credit Card number (visa only):</label>
-          <input type="text" name="cardNum" id="cardNum">
+          <input type="text" name="cardNum" id="cardNum" pattern="^[0-9*]{16}$" title="You sure that is your Card Number? Do not use dashes.">
         </div>
         <div class="row pad">
           <input type="submit">
