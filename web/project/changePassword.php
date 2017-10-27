@@ -73,5 +73,5 @@
     </form>
   </div>
 
-  <?php $_SESSION['error'] = ""; ?>
+  <?php unset($_SESSION['error']); ?>
   </body>
