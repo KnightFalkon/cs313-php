@@ -19,14 +19,14 @@ $state = test_input($_POST['state']);
 $zip = test_input($_POST['zip']);
 $cardNum = test_input($_POST['cardNum']);
 
-if (!isset($username) || $username == "" //|| !is_string($username)
-  || !isset($password) || $password == "" //|| !is_string($password)
-  || !isset($name) || $name == "" //|| !is_string($name)
-  || !isset($street) || $street == "" //|| !is_string($street)
-  || !isset($city) || $city == "" //|| !is_string($city)
-  || !isset($state) || $state == "" //|| !is_string($state)
-  || !isset($zip) || $zip == "" //|| !is_int($zip)
-  || !isset($cardNum) || $cardNum == "" )//|| !is_int($cardNum))
+if (!isset($username) || $username == "" 
+  || !isset($password) || $password == "" 
+  || !isset($name) || $name == "" 
+  || !isset($street) || $street == "" 
+  || !isset($city) || $city == "" 
+  || !isset($state) || $state == "" 
+  || !isset($zip) || $zip == "" 
+  || !isset($cardNum) || $cardNum == "" )
 {
   $_SESSION['error'] = "Try Again";
   header("Location: signup.php");

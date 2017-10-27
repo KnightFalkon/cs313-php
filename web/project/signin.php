@@ -66,12 +66,12 @@ if (isset($_POST['username']) && isset($_POST['password']))
   <header>
     <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1></br>
 
-    <p class="text-right"><?php echo "Welcome " . $_SESSION['username']?></p>
+    <a href="signup.php">Sign up</a>
 
     <hr class="thick">
 
   </header>
-<div>
+<div class="text-center">
 
 <?php
 if ($badLogin)
@@ -95,10 +95,6 @@ if ($badLogin)
 	<input type="submit" value="Sign In" />
 
 </form>
-
-<br /><br />
-
-Or <a href="signup.php">Sign up</a> for a new account.
 
 </div>
 

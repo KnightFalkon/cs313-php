@@ -32,7 +32,7 @@
     <header>
       <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1></br>
 
-      <p class="text-right"><?php echo "Welcome " . $_SESSION['username']?></p>
+      <a href="signin.php">Back to Sign-in</a>
 
       <hr class="thick">
 
