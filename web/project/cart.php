@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
 
   <link rel="stylesheet" href="browse.css">
-  <!-- <script type="text/javascript" src="prove2.js"></script> -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
 
@@ -48,7 +47,7 @@
       <h3>These are the items that are currently in your cart.</h3>
       <?php
         foreach($_SESSION as $value) {
-          if($value == $_SESSION['userid'] || $value == $_SESSION['username'] || $game == $_SESSION['error']) {
+          if($value == $_SESSION['userid'] || $value == $_SESSION['username'] || $value == $_SESSION['error']) {
             continue;
           }
           echo "<div class='row'>";
