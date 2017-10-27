@@ -26,7 +26,7 @@ if (!isset($username) || $username == "" //|| !is_string($username)
   || !isset($city) || $city == "" //|| !is_string($city)
   || !isset($state) || $state == "" //|| !is_string($state)
   || !isset($zip) || $zip == "" //|| !is_int($zip)
-  || !isset($cardNum) || $cardNum == "" //|| !is_int($cardNum))
+  || !isset($cardNum) || $cardNum == "" )//|| !is_int($cardNum))
 {
   $_SESSION['error'] = "Try Again";
   header("Location: signup.php");
