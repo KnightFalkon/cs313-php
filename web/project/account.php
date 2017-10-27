@@ -92,7 +92,7 @@
   $statement->bindValue(':user_id', $_SESSION['userid']);
   $statement->execute();
 
-  $row = $statement->fetch(PDO::FETCH_ASSOC);
+  $row = $statement->fetch();
 
   foreach($row as $value) {
     echo '<div class="col-xs-12 text-center">';
