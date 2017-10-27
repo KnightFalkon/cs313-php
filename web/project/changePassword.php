@@ -7,6 +7,8 @@
 	$statement->bindValue(':username', $_SESSION['username']);
   $result = $statement->execute();
   $row = $statement->fetch();
+
+  $_SESSION['error'] = "";
 ?>
 <!DOCTYPE html>
 <html>
@@ -51,7 +53,7 @@
 
   <h4 class="text-center">Account Details</h4>
 
-  <p class="text-center"><?php echo $_SESSION['error']; $_SESSION['error'] = "";?></p>
+  <p class="text-center"><?php echo $_SESSION['error'];?></p>
 
   <div class="col-xs-12 text-center">
     <form action="updatePassword.php" method="post">

@@ -35,7 +35,7 @@
 	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $_SESSION['username']);
 	$result = $statement->execute();
-	if ($result)
+	if (true)
 	{
 		$row = $statement->fetch();
 		$hashedPasswordFromDB = $row['password'];
@@ -55,13 +55,13 @@
 		}
 		else
 		{
-      $_SESSION['Error'] = "Incorrect Password";
+      $_SESSION['error'] = "Incorrect Password";
       header("Location: changePassword.php");
 		}
 	}
 	else
 	{
-    $_SESSION['Error'] = "Incorrect Password";
+    $_SESSION['error'] = "Incorrect Password";
     header("Location: changePassword.php");
 	}
 ?>
