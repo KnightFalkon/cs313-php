@@ -68,7 +68,7 @@ else
       <form  action="update.php" method="post">
         <div class="row pad">
           <label for="name">name:</label>
-          <input type="text" name="name" id="name" value="<?php echo $userRow['name'];?>" pattern="^[a-z*A-Z*]{1,50}$" title="You sure that is your name??">
+          <input type="text" name="name" id="name" value="<?php echo $userRow['name'];?>" pattern="^[a-z*A-Z*\s]{1,50}$" title="You sure that is your name??">
         </div>
         <div class="row pad">
           <label for="street">street:</label>

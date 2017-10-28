@@ -1,0 +1,7 @@
+postgres://rqmfstqypvnmxm:b16daa2f4a548dc3b222c6bafe5ae776127700292d7cb10c7a02f8ac8e54a3a1@ec2-23-23-192-242.compute-1.amazonaws.com:5432/d4lj1g5h93nsdn
+
+
+postgres://<username>:<password>@<host_name>:<port>/<dbname>
+
+pg_dump --host=ec2-23-23-192-242.compute-1.amazonaws.com --port=5432 --username=rqmfstqypvnmxm --password --dbname=d4lj1g5h93nsdn > output.sql
+
