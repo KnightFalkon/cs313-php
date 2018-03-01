@@ -78,20 +78,22 @@
 					}
 					echo "here is the value $value[1]";
 					//This is where things are added
-					$statement = $db->prepare("SELECT name, picture, description FROM games WHERE name = '$value[0]'");
-					$statement->execute();
-					// Go through each result
-					while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-					{
-						// The variable "row" now holds the complete record for that
-						// row, and we can access the different values based on their
-						// name
-						echo '<div class="col-xs-12 text-center">';
-						echo '<div class="row pad">';
-						echo '<p>' . $row['description'] . '</p>';
-						echo '<img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="270" width="480" class="img-responsive center-block">';
-            echo '<button class="btn-xs btn-primary" onclick="' . "deleteItem('" . "$value" . "')" . '">delete</button>' . "\n";						
-						echo '</div>';
+					for($i = 0; $i < $value[1]; $i++) {
+						$statement = $db->prepare("SELECT name, picture, description FROM games WHERE name = '$value[0]'");
+						$statement->execute();
+						// Go through each result
+						while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+						{
+							// The variable "row" now holds the complete record for that
+							// row, and we can access the different values based on their
+							// name
+							echo '<div class="col-xs-12 text-center">';
+							echo '<div class="row pad">';
+							echo '<p>' . $row['description'] . '</p>';
+							echo '<img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="270" width="480" class="img-responsive center-block">';
+							echo '<button class="btn-xs btn-primary" onclick="' . "deleteItem('" . "$value" . "')" . '">delete</button>' . "\n";						
+							echo '</div>';
+						}
 					}
 
 
