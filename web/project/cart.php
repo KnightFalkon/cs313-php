@@ -69,14 +69,14 @@
     <div class="col xs-12 text-center">
       <h3>These are the items that are currently in your cart.</h3>
       <?php
-				$count = 0;
+				$count = 1;
         foreach($_SESSION as $value) {
-					echo "$count ";
+					echo "Here is the count $count ";
 					$count++;
           if($value == $_SESSION['userid'] || $value == $_SESSION['username'] || $value == $_SESSION['error']) {
             continue;
 					}
-					echo "here is the value $value[0]";
+					echo "here is the value $value[1]";
 					//This is where things are added
 					$statement = $db->prepare("SELECT name, picture, description FROM games WHERE name = '$value[0]'");
 					$statement->execute();
