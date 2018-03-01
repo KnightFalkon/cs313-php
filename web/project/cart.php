@@ -74,7 +74,7 @@
             continue;
 					}
 					//This is where things are added
-					$statement = $db->prepare("SELECT name, picture, description FROM games WHERE name = '$value'");
+					$statement = $db->prepare("SELECT name, picture, description FROM games WHERE name = '$value[0]'");
 					$statement->execute();
 					// Go through each result
 					while ($row = $statement->fetch(PDO::FETCH_ASSOC))
