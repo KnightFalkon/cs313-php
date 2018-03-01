@@ -74,7 +74,7 @@
           if($value[0] == $_SESSION['userid'] || $value[0] == $_SESSION['username'] || $value[0] == $_SESSION['error']) {
             continue;
 					}
-					echo 'we made it';
+					echo "here is the value $value[0]";
 					//This is where things are added
 					$statement = $db->prepare("SELECT name, picture, description FROM games WHERE name = '$value[0]'");
 					$statement->execute();
