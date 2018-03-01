@@ -66,11 +66,12 @@
     <div class="col xs-12 text-center">
       <h3>These are the items that are currently in your cart.</h3>
       <?php
+				echo 'before loop';
         foreach($_SESSION as $value) {
           if($value == $_SESSION['userid'] || $value == $_SESSION['username'] || $value == $_SESSION['error']) {
             continue;
 					}
-
+					echo 'here we are';
 					//This is where things are added
 					$statement = $db->prepare("SELECT name, picture, description FROM games WHERE name = $value");
 					$statement->execute();
