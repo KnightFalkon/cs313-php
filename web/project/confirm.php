@@ -82,6 +82,15 @@
 						echo '</div>';
 					}
 
+
+					//end of addition
+					
+          // echo "<div class='row'>";
+          // echo "<h3>$value</h3>";
+          // echo '<button class="btn-xs btn-primary" onclick="' . "deleteItem('" . "$value" . "')" . '">delete</button>' . "\n";
+          // echo "</div>";
+        }
+
         foreach($_REQUEST as $data) {
           $data = trim($data);
           $data = stripslashes($data);
