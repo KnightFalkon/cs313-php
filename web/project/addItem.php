@@ -16,7 +16,8 @@
       foreach($_REQUEST as $value) {
 				$array = array($value, 0);
 				if(in_array($value, $_SESSION)) {
-					$_SESSION[$value][1] = $_SESSION[$value][1] + 1;
+					$_SESSION[$value][1] = "yes, this is working";
+					// $_SESSION[$value][1] = $_SESSION[$value][1] + 1;
 				}
 				else {
 					$_SESSION[$value] = $array;					
