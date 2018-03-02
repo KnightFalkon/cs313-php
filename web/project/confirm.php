@@ -62,26 +62,27 @@
         echo "<h2>These items: </h2>";
 
         foreach($_SESSION as $value) {
-					echo 'here we are';
-          if($value[0] == $_SESSION['userid'] || $value[0] == $_SESSION['username'] || $value[0] == $_SESSION['error']) {
+          if($value == $_SESSION['userid'] || $value == $_SESSION['username'] || $value == $_SESSION['error']) {
             continue;
 					}
-					echo 'it worked';
-					//This is where things are added
-					$statement = $db->prepare("SELECT name, picture, description FROM games WHERE name = '$value[0]'");
-					$statement->execute();
-					// Go through each result
-					while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-					{
-						// The variable "row" now holds the complete record for that
-						// row, and we can access the different values based on their
-						// name
-						echo '<div class="col-xs-12 text-center">';
-						echo '<div class="row pad">';
-						echo '<p>' . $row['description'] . '</p>';
-						echo '<img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="270" width="480" class="img-responsive center-block">';
-            echo '<button class="btn-xs btn-primary" onclick="' . "deleteItem('" . "$value" . "')" . '">delete</button>' . "\n";						
-						echo '</div>';
+
+					for($i = 0; $i < $value[1]; $i++) {
+						//This is where things are added
+						$statement = $db->prepare("SELECT name, picture, description FROM games WHERE name = '$value[0]'");
+						$statement->execute();
+						// Go through each result
+						while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+						{
+							// The variable "row" now holds the complete record for that
+							// row, and we can access the different values based on their
+							// name
+							echo '<div class="col-xs-12 text-center">';
+							echo '<div class="row pad">';
+							echo '<p>' . $row['description'] . '</p>';
+							echo '<img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="270" width="480" class="img-responsive center-block">';
+							echo '<button class="btn-xs btn-primary" onclick="' . "deleteItem('" . "$value" . "')" . '">delete</button>' . "\n";						
+							echo '</div>';
+						}
 					}
 
 
@@ -114,12 +115,15 @@
         foreach($_SESSION as $game) {
           if($game == $_SESSION['userid'] || $game == $_SESSION['username'] || $game == $_SESSION['error']) {
             continue;
-          }
-          $query = 'INSERT INTO transactions (game_id, user_id, purchase_date) VALUES((SELECT id FROM games WHERE name = :game), (SELECT id FROM users WHERE username = :username), current_date)';
-          $statement = $db->prepare($query);
-          $statement->bindValue(':username', $_SESSION['username']);
-          $statement->bindValue(':game', $game);        
-          $statement->execute();
+					}
+					
+					for($i = 0; $i < $value[1]; $i++) {
+						$query = 'INSERT INTO transactions (game_id, user_id, purchase_date) VALUES((SELECT id FROM games WHERE name = :game), (SELECT id FROM users WHERE username = :username), current_date)';
+						$statement = $db->prepare($query);
+						$statement->bindValue(':username', $_SESSION['username']);
+						$statement->bindValue(':game', $game);        
+						$statement->execute();
+					}
         }
 
         foreach($_SESSION as $value) {
