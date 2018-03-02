@@ -117,7 +117,7 @@
             continue;
 					}
 					
-					for($i = 0; $i < $value[1]; $i++) {
+					for($i = 0; $i < $game[1]; $i++) {
 						$query = 'INSERT INTO transactions (game_id, user_id, purchase_date) VALUES((SELECT id FROM games WHERE name = :game), (SELECT id FROM users WHERE username = :username), current_date)';
 						$statement = $db->prepare($query);
 						$statement->bindValue(':username', $_SESSION['username']);
