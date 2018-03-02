@@ -121,7 +121,7 @@
 						$query = 'INSERT INTO transactions (game_id, user_id, purchase_date) VALUES((SELECT id FROM games WHERE name = :game), (SELECT id FROM users WHERE username = :username), current_date)';
 						$statement = $db->prepare($query);
 						$statement->bindValue(':username', $_SESSION['username']);
-						$statement->bindValue(':game', $game);        
+						$statement->bindValue(':game', $game[0]);        
 						$statement->execute();
 					}
         }
