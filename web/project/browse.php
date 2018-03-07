@@ -85,7 +85,7 @@
 				// echo $row['name']. $row['description'];				
 				echo '<img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="100" width="100" class="img-responsive center-block" style="display:inline-block;">';
 				echo '<p>' . $row['description'] . '</p>';
-        echo '<button class="btn-lg btn-primary" onclick="' . "addToCart('" . $row['name'] . "')" . '">Buy</button>' . "\n";
+        echo '<button style="display:inline-block;" class="btn-lg btn-primary" onclick="' . "addToCart('" . $row['name'] . "')" . '">Buy</button>' . "\n";
 				echo '</div>';
 			}
 			echo '</div>';
