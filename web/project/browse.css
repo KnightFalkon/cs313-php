@@ -12,6 +12,10 @@
 	width: 400px;
 }
 
+.raise {
+	top:50px;
+}
+
 .thick {
   border: none;
   height: 1px;
