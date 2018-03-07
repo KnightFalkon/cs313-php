@@ -73,7 +73,7 @@
       $statement = $db->prepare("SELECT name, picture, description FROM games");
       $statement->execute();
 			// Go through each result
-			echo '<div class="col-xs-12 text-center" style="width:400px">';			
+			echo '<div class="col-xs-12 text-center" style="width:400px; display:inline-block;">';			
       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
       {
         // The variable "row" now holds the complete record for that
