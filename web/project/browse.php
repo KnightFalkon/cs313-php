@@ -74,7 +74,7 @@
       $statement->execute();
 			// Go through each result
 			echo '<div class="col-xs-12 text-center">';	
-			echo '<div style="width:400px">';
+			echo '<div style="width:400px; text-align:center;">';
       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
       {
         // The variable "row" now holds the complete record for that
