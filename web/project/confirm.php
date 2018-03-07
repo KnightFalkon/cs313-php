@@ -59,7 +59,7 @@
     <div class="text-center">
       <?php
 				echo '<div class="cRow">';
-				echo '<div class="cColumn>';
+				echo '<div class="cColumn">';
 				echo "<h2>The following items will be sent to: </h2>";
 				
         echo "<h4>" . $userRow['name'] . "\n"
