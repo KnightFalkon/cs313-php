@@ -88,6 +88,7 @@
 				echo $row['description'];
         echo '<div class="pull-right"><button class="btn-lg btn-primary" onclick="' . "addToCart('" . $row['name'] . "')" . '">Buy</button></div>';
 				echo '</div>';
+				echo '<hr class="thick">';
 			}
 			echo '</div>';
 			echo '</div>';
