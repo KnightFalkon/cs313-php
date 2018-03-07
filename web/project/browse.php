@@ -72,22 +72,23 @@
     <?php
       $statement = $db->prepare("SELECT name, picture, description FROM games");
       $statement->execute();
-      // Go through each result
+			// Go through each result
+			echo '<div class="col-xs-12 text-center">';			
       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
       {
         // The variable "row" now holds the complete record for that
         // row, and we can access the different values based on their
         // name
-        echo '<div class="col-xs-12 text-center" style="float:left;">';
-				echo '<div class="row pad">';
+				echo '<div class="row pad" style="display:inline-block;>';
 				echo '<hr class="thick">';
 				// echo '<p>' . $row['description'] . '</p>';
 				// echo $row['name']. $row['description'];				
         echo '<img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="100" width="100" class="img-responsive center-block nobr">';
         echo '<button class="btn-lg btn-primary" onclick="' . "addToCart('" . $row['name'] . "')" . '">Buy</button>' . "\n";
 				echo '</div>';
-				echo '</div>';
-      }
+			}
+			echo '</div>';
+			
     ?>
 
     </div>
