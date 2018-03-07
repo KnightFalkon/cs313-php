@@ -3,6 +3,10 @@
   padding-top: 5px;
 }
 
+.nobr {
+	white-space: nowrap;
+}
+
 .thick {
   border: none;
   height: 1px;
