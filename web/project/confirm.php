@@ -62,17 +62,11 @@
 				echo '<div class="cColumn>';
 				echo "<h2>The following items will be sent to: </h2>";
 				
-				foreach($_REQUEST as $data) {
-          $data = trim($data);
-          $data = stripslashes($data);
-          $data = htmlspecialchars($data);
-				}
-				
         echo "<h4>" . $userRow['name'] . "\n"
             . "<h4>" . $userRow['street'] . "</h4>"
             . "<h4>" . $userRow['city'] . ", " . $userRow['state'] . " " . $userRow['zip'] . "</h4>";
 				echo '</div>';
-				
+
 				echo '<div class="cColumn">';
 
         foreach($_SESSION as $value) {
@@ -118,6 +112,12 @@
 				
 				echo '</div>';
 				echo '</div>';
+
+				foreach($_REQUEST as $data) {
+          $data = trim($data);
+          $data = stripslashes($data);
+          $data = htmlspecialchars($data);
+				}
 
         unset($value);
         unset($data);
