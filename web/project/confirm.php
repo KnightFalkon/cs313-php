@@ -58,9 +58,21 @@
 
     <div class="text-center">
       <?php
-
-        echo "<h2>These items: </h2>";
-
+				echo '<div class="cRow">';
+				echo '<div class="cColumn>';
+				echo "<h2>The following items will be sent to: </h2>";
+				
+				foreach($_REQUEST as $data) {
+          $data = trim($data);
+          $data = stripslashes($data);
+          $data = htmlspecialchars($data);
+				}
+				
+        echo "<h4>" . $userRow['name'] . "\n"
+            . "<h4>" . $userRow['street'] . "</h4>"
+            . "<h4>" . $userRow['city'] . ", " . $userRow['state'] . " " . $userRow['zip'] . "</h4>";
+				echo '</div>';
+				echo '<div class="cColumn">';
         foreach($_SESSION as $value) {
           if($value == $_SESSION['userid'] || $value == $_SESSION['username'] || $value == $_SESSION['error']) {
             continue;
@@ -71,19 +83,26 @@
 						$statement = $db->prepare("SELECT name, picture, description FROM games WHERE name = '$value[0]'");
 						$statement->execute();
 						// Go through each result
+						echo '<div class="col-xs-12 text-center">';	
+						echo '<div style="width:400px; text-align:center;">';
 						while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 						{
 							// The variable "row" now holds the complete record for that
 							// row, and we can access the different values based on their
 							// name
-							echo '<div class="col-xs-12 text-center">';
 							echo '<div class="row pad">';
+							// echo '<p>' . $row['description'] . '</p>';
+							// echo $row['name']. $row['description'];
+							echo '<div>';				
+							echo '<div class="pull-left" style="display:inline-block;"><img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="200" width="250" class="img-responsive center-block">' . $row['esrb'] . '</div>';
+							echo '<p class="bold">' . $row['name'] . '</p>';
 							echo '<p>' . $row['description'] . '</p>';
-							echo '<img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="270" width="480" class="img-responsive center-block">';
-							echo '<button class="btn-xs btn-primary" onclick="' . "deleteItem('" . "$value" . "')" . '">delete</button>' . "\n";						
+							echo '</div></br>';
 							echo '</div>';
-							echo '</div>';
+							echo '<hr class="thick">';
 						}
+						echo '</div>';
+						echo '</div>';
 					}
 
 
@@ -93,19 +112,10 @@
           // echo "<h3>$value</h3>";
           // echo '<button class="btn-xs btn-primary" onclick="' . "deleteItem('" . "$value" . "')" . '">delete</button>' . "\n";
           // echo "</div>";
-        }
-
-        foreach($_REQUEST as $data) {
-          $data = trim($data);
-          $data = stripslashes($data);
-          $data = htmlspecialchars($data);
-        }
-
-        
-        echo "<h2>Will be sent to: </h2>";
-        echo "<h4>" . $userRow['name'] . "\n"
-            . "<h4>" . $userRow['street'] . "</h4>"
-            . "<h4>" . $userRow['city'] . ", " . $userRow['state'] . " " . $userRow['zip'] . "</h4>";
+				}
+				
+				echo '</div>';
+				echo '</div>';
 
         unset($value);
         unset($data);
