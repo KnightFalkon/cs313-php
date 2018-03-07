@@ -81,7 +81,7 @@
         echo '<div class="col-xs-12 text-center">';
 				echo '<div class="row pad">';
 				// echo '<p>' . $row['description'] . '</p>';
-				echo '<p>' . $row['name'] . '</p>' . $row['description'];				
+				echo $row['name']. $row['description'];				
         echo '<img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="270" width="480" class="img-responsive center-block">';
         echo '<button class="btn-lg btn-primary" onclick="' . "addToCart('" . $row['name'] . "')" . '">Buy</button>' . "\n";
         echo '</div>';
