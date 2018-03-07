@@ -78,7 +78,7 @@
         // The variable "row" now holds the complete record for that
         // row, and we can access the different values based on their
         // name
-        echo '<div class="col-xs-12 text-center">';
+        echo '<div class="col-xs-12 text-center" style="float:left;">';
 				echo '<div class="row pad">';
 				echo '<hr class="thick">';
 				// echo '<p>' . $row['description'] . '</p>';
