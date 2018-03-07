@@ -72,7 +72,9 @@
             . "<h4>" . $userRow['street'] . "</h4>"
             . "<h4>" . $userRow['city'] . ", " . $userRow['state'] . " " . $userRow['zip'] . "</h4>";
 				echo '</div>';
+				
 				echo '<div class="cColumn">';
+
         foreach($_SESSION as $value) {
           if($value == $_SESSION['userid'] || $value == $_SESSION['username'] || $value == $_SESSION['error']) {
             continue;

@@ -7,6 +7,14 @@
 	white-space: nowrap;
 }
 
+.cRow {
+	display: flex;
+}
+
+.cColumn {
+	flex: 50%;
+}
+
 .med {
 	display: block;
 	width: 400px;
