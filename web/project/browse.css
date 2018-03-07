@@ -7,6 +7,10 @@
 	white-space: nowrap;
 }
 
+.med {
+	width: 400px;
+}
+
 .thick {
   border: none;
   height: 1px;
