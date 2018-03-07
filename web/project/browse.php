@@ -84,7 +84,7 @@
 				// echo '<p>' . $row['description'] . '</p>';
 				// echo $row['name']. $row['description'];
 				echo '<div>';				
-				echo '<div class="pull-left" style="display:inline-block;"><img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="150" width="200" class="img-responsive center-block">' . $row['esrb'] . '</div>';
+				echo '<div class="pull-left" style="display:inline-block;"><img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="200" width="250" class="img-responsive center-block">' . $row['esrb'] . '</div>';
 				echo '<p class="bold">' . $row['name'] . '</p>';
 				echo '<p>' . $row['description'] . '</p>';
 				echo '</div></br>';
