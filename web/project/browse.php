@@ -73,13 +73,13 @@
       $statement = $db->prepare("SELECT name, picture, description FROM games");
       $statement->execute();
 			// Go through each result
-			echo '<div class="col-xs-12 text-center">';			
+			echo '<div class="col-xs-12 text-center" style="width:400px">';			
       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
       {
         // The variable "row" now holds the complete record for that
         // row, and we can access the different values based on their
         // name
-				echo '<div class="pad med">';
+				echo '<div class="row pad med">';
 				echo '<hr class="thick">';
 				// echo '<p>' . $row['description'] . '</p>';
 				// echo $row['name']. $row['description'];				
