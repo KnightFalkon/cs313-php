@@ -83,7 +83,7 @@
 				echo '<hr class="thick">';
 				// echo '<p>' . $row['description'] . '</p>';
 				// echo $row['name']. $row['description'];				
-				echo '<div style="display:inline-block;"><img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="100" width="100" class="img-responsive center-block" style="display:inline-block;"></div>';
+				echo '<div style="display:inline-block;"><img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="100" width="100" class="img-responsive center-block pull-left"></div>';
 				echo '<p>' . $row['description'] . '</p>';
         echo '<button class="btn-lg btn-primary" onclick="' . "addToCart('" . $row['name'] . "')" . '">Buy</button>' . "\n";
 				echo '</div>';
