@@ -81,10 +81,11 @@
         // row, and we can access the different values based on their
         // name
 				echo '<div class="row pad">';
-				echo '<hr class="thick">';
 				// echo '<p>' . $row['description'] . '</p>';
 				// echo $row['name']. $row['description'];				
 				echo '<div class="pull-left" style="display:inline-block;"><img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="150" width="200" class="img-responsive center-block">' . $row['esrb'] . '</div>';
+				echo '<p>'. $row['name'] . '</p>';
+				echo '<hr class="thick">';
 				echo '<p>' . $row['description'] . '</p>';
         echo '<div class="pull-right"><button class="btn-lg btn-primary" onclick="' . "addToCart('" . $row['name'] . "')" . '">Buy</button></div>';
 				echo '</div>';
