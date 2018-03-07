@@ -80,7 +80,7 @@
         // name
         echo '<div class="col-xs-12 text-center">';
 				echo '<div class="row pad">';
-				echo '<hr>';
+				echo '<hr class="thick">';
 				// echo '<p>' . $row['description'] . '</p>';
 				// echo $row['name']. $row['description'];				
         echo '<img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="100" width="100" class="img-responsive center-block nobr">';
