@@ -82,6 +82,7 @@
 							echo '<img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="270" width="480" class="img-responsive center-block">';
 							echo '<button class="btn-xs btn-primary" onclick="' . "deleteItem('" . "$value" . "')" . '">delete</button>' . "\n";						
 							echo '</div>';
+							echo '</div>';
 						}
 					}
 
