@@ -79,7 +79,7 @@
         // The variable "row" now holds the complete record for that
         // row, and we can access the different values based on their
         // name
-				echo '<div class="row pad">';
+				echo '<div class="row pad" style="display:inline-block;">';
 				echo '<hr class="thick">';
 				// echo '<p>' . $row['description'] . '</p>';
 				// echo $row['name']. $row['description'];				
