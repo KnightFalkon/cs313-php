@@ -151,11 +151,11 @@
 					}
         }
 
-        foreach($_SESSION as $value) {
+        foreach($_SESSION as $key => $value) {
           if($value == $_SESSION['userid'] || $value == $_SESSION['username'] || $value == $_SESSION['error']) {
             continue;
           }
-          unset($_SESSION[$value]);
+          unset($_SESSION[$key]);
         }
         unset($game);
         unset($value);
