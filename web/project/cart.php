@@ -112,7 +112,6 @@
 						echo '</div>';
 						echo '</div>';
 
-						echo '<a href="confirm.php">Purchase All</a>';
 					}
 
 
@@ -123,7 +122,8 @@
           // echo '<button class="btn-xs btn-primary" onclick="' . "deleteItem('" . "$value" . "')" . '">delete</button>' . "\n";
           // echo "</div>";
         }
-
+				echo '<a href="confirm.php">Purchase All</a>';
+				
         unset($value);
       ?>  
     </div>
