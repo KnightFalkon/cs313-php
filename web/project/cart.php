@@ -45,6 +45,11 @@
       
       location.reload();
     }
+
+		function handleSelect(elm)
+		{
+			window.location = elm.value;
+		}
   </script>
   </head>
 

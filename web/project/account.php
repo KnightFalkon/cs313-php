@@ -39,6 +39,12 @@
 
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
+		<script>
+				function handleSelect(elm)
+				{
+					window.location = elm.value;
+				}
+		</script>
   </head>
 
   <body>
