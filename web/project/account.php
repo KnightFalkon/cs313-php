@@ -63,7 +63,8 @@
 
 
   <h4 class="text-center">Account Details</h4>
-
+	<div class="cRow">
+	<div class="cColumn">
   <div class="col-xs-12 text-center">
     <div class="row pad">
       <label for="name"><?php echo "Name: " . $row['name'];?></label>
@@ -84,7 +85,9 @@
       <label for="cardNum"><?php echo "Visa Number: " . $row['card_num'];?></label>
     </div>
   </div>
+	</div>
 
+	<div class="cColumn">
   <h4 class="text-center">Here are all of the games you've bought!</h4>
 
   <?php
@@ -102,5 +105,8 @@
   }
 
   ?>
+
+	</div>
+	</div>
 
   </body>

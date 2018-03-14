@@ -63,7 +63,7 @@
 				echo "<h2>The following items will be sent to: </h2>";
 				
         echo "<h4>" . $userRow['name'] . "\n"
-            . "<h4>" . $userRow['street'] . "</h4>"
+            . "<h4>" . $userRow['address'] . "</h4>"
             . "<h4>" . $userRow['city'] . ", " . $userRow['state'] . " " . $userRow['zip'] . "</h4>";
 				echo '</div>';
 
