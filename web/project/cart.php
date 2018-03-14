@@ -53,14 +53,19 @@
       <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1></br>
 
       <p class="text-right"><?php echo "Welcome " . $_SESSION['username']?></p>
-      <div class="pull-right">
-        <a href="confirm.php">Purchase</a>
-        <a href="account.php">Go to account</a>
-        <a href="browse.php">Back to Browse</a>
-        <a href="logout.php">Logout</a>
+			<div class="pull-right">
+        <!-- <a href="account.php">Go to account</a>
+        <a href="cart.php">Go to cart</a>
+        <a href="logout.php">Logout</a> -->
+				<select name="navbar" onchange="javascript:handleSelect(this)">
+					<option value="">Navigation</option>
+					<option value="browse.php">browse</option>
+					<option value="account.php">Account</option>
+					<option value="logout.php">Logout</option>
+				</select>
         
       </div>  
-      </br></br></br>
+      </br>
 
       <hr class="thick">
 
@@ -101,6 +106,8 @@
 						}
 						echo '</div>';
 						echo '</div>';
+
+						echo '<a href="confirm.php">Purchase All</a>';
 					}
 
 
