@@ -96,13 +96,26 @@
   $statement->bindValue(':user_id', $_SESSION['userid']);
   $statement->execute();
 
-  while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-    echo '<div class="col-xs-12 text-center">';
-      echo '<div class="row pad">';
-        echo $row['name'];
-      echo '</div>';
-    echo '</div>';
-  }
+	echo '<div class="col-xs-12 text-center">';	
+	echo '<div style="width:400px; text-align:center;">';
+	while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+	{
+		// The variable "row" now holds the complete record for that
+		// row, and we can access the different values based on their
+		// name
+		echo '<div class="row pad">';
+		// echo '<p>' . $row['description'] . '</p>';
+		// echo $row['name']. $row['description'];
+		echo '<div>';				
+		echo '<div class="pull-left" style="display:inline-block;"><img src="' . $row['picture'] . '" alt="' . $row['name'] . '" height="200" width="250" class="img-responsive center-block">' . $row['esrb'] . '</div>';
+		echo '<p class="bold">' . $row['name'] . '</p>';
+		echo '<p>' . $row['description'] . '</p>';
+		echo '</div></br>';
+		echo '</div>';
+		echo '<hr class="thick">';
+	}
+	echo '</div>';
+	echo '</div>';
 
   ?>
 
