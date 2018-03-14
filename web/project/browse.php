@@ -64,7 +64,7 @@
       <p class="text-right"><?php echo "Welcome " . $_SESSION['username']?></p>
     
 
-			<div class="pull-right">
+			<div class="">
         <!-- <a href="account.php">Go to account</a>
         <a href="cart.php">Go to cart</a>
         <a href="logout.php">Logout</a> -->
