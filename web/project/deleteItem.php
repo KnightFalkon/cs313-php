@@ -13,11 +13,11 @@
     <?php
       echo "This is the first line" . $_REQUEST[0];
       print_r($_SESSION);
-      foreach($_REQUEST as $key => $value) {
-				if($_SESSION[$key][1] != 0) {
-					$_SESSION[$key][1] -= 1;
+      foreach($_REQUEST as $value) {
+				if($_SESSION[$value][1] != 0) {
+					$_SESSION[$value][1] -= 1;
 				} else {
-					unset($_SESSION[$key]);
+					unset($_SESSION[$value]);
 					
 				}
       }
