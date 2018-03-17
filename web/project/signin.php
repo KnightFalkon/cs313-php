@@ -86,11 +86,11 @@ if ($badLogin)
 
 <form id="mainForm" action="signin.php" method="POST">
 
-	<input type="text" id="username" name="username" value="yoloo">
+	<input type="text" id="username" name="username">
 	<label for="txtUser">Username</label>
 	<br /><br />
 
-	<input type="password" id="password" name="password" value="roloo">
+	<input type="password" id="password" name="password">
 	<label for="txtPassword">Password</label>
 	<br /><br />
 
