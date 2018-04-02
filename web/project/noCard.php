@@ -39,7 +39,7 @@
   <header>
     <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1></br>
 
-    <a href="account.php" class="pull-right">Go to Account</a>
+    <a href="account.php">Go to Account</a>
 
     </br></br></br>
 
