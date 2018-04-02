@@ -61,6 +61,7 @@
 					<option value="">Navigation</option>
 					<option value="browse.php">Browse</option>
 					<option value="cart.php">Cart</option>
+					<option value="updateInfo.php">Edit Account</option>
 					<option value="logout.php">Logout</option>
 				</select>
         
