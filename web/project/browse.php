@@ -50,7 +50,7 @@
 				// $('#alert').fadeIn('fast');
 				
 				// $('#alert').fadeOut('slow');
-				setTimeout(function(){ $('#alert').css('visibility', 'hidden'); $('#alert').css('display', ''); }, 1500);
+				setTimeout(function(){ $('#alert').css('visibility', 'hidden'); $('#alert').css('display', ''); }, 1000);
 				// $('#alert').css('visibility', 'hidden');
 				
       }
