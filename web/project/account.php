@@ -10,7 +10,7 @@
 	
 	if($row['card_num'] == 6666666666666666 || $row['card_num'] == '6666666666666666') 
 	{
-		$row['card_num'] = '';
+		$row['card_num'] = 'Update, if you want to games.';
 	}
 
   if (isset($_SESSION['username']))

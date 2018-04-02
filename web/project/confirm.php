@@ -18,7 +18,13 @@
   {
     header("Location: signin.php");
     die();
-  }
+	}
+	
+	if($userRow['card_num'] == 6666666666666666 || $userRow['card_num'] == '6666666666666666') 
+	{
+		header("Location: noCard.php");	
+		die();
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">

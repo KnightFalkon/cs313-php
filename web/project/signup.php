@@ -76,7 +76,7 @@
           <input type="text" name="zip" id="zip" pattern="^[0-9*]{5}$" title="You sure that is your Zip Code?">
         </div>
         <div class="row pad">
-          <label for="cardNum">Credit Card number (visa only):</label>
+          <label for="cardNum">Credit Card number (Optional, visa only):</label>
           <input type="text" name="cardNum" id="cardNum" pattern="^$|^[0-9*]{16}$" title="You sure that is your Card Number? Do not use dashes.">
         </div>
         <div class="row pad">

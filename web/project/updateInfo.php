@@ -11,6 +11,11 @@ $statement->bindValue(':username', $_SESSION['username']);
 $result = $statement->execute();
 $userRow = $statement->fetch();
 
+if($row['card_num'] == 6666666666666666 || $row['card_num'] == '6666666666666666') 
+{
+	$row['card_num'] = 'Update, if you want to games.';
+}
+
 if (isset($_SESSION['username']))
 {
   $username = $_SESSION['username'];
