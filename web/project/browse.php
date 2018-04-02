@@ -49,7 +49,7 @@
 				$('#alert').css('visibility', 'visible');
 				// $('#alert').fadeIn('fast');
 				
-				$('#alert').fadeOut('slow');
+				$('#alert').fadeOut(3000);
 				setTimeout(function(){ $('#alert').css('visibility', 'hidden'); $('#alert').css('display', ''); }, 3000);
 				// $('#alert').css('visibility', 'hidden');
 				
