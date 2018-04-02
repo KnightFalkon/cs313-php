@@ -39,7 +39,7 @@
   <header>
     <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1></br>
 
-    <a href="account.php">Go to Account</a>
+    <a href="account.php" class="pull-right">Go to Account</a>
 
     </br></br></br>
 
@@ -51,7 +51,7 @@
 <h1>No Card info found</h1>
 <p>In order to buy games, you'll need to go to your account and add a credit card.</p>
 
-<a href="account.php" class="pull-right">Go to Account</a>
+<a href="updateInfo.php">Go to Account</a>
 
 </div>
 
