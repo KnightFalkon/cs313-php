@@ -46,6 +46,9 @@
             console.log(response);
           }
         });
+
+				$('body').append('<div id="alert" style="position: fixed; top: 50%; left: 50%;">Item added to cart</div>');
+				$('#alert').fadeOut('slow')
       }
 
 			function handleSelect(elm)
