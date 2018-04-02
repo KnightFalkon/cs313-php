@@ -48,6 +48,7 @@
         });
 				$('#alert').css('visibility', 'visible');
 				$('#alert').fadeOut('slow');
+				setTimeout(function(){ $('#alert').css('visibility', 'hidden'); }, 3000);
 				// $('#alert').css('visibility', 'hidden');
 				
       }
