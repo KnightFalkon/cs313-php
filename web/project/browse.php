@@ -46,9 +46,11 @@
             console.log(response);
           }
         });
-				$('#alert').css('visibility', 'visible');
+				// $('#alert').css('visibility', 'visible');
+				$('#alert').fadeIn('fast');
+				
 				$('#alert').fadeOut('slow');
-				setTimeout(function(){ $('#alert').css('visibility', 'hidden'); }, 3000);
+				// setTimeout(function(){ $('#alert').css('visibility', 'hidden'); }, 3000);
 				// $('#alert').css('visibility', 'hidden');
 				
       }
