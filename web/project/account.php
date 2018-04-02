@@ -6,7 +6,12 @@
 	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $_SESSION['username']);
   $result = $statement->execute();
-  $row = $statement->fetch();
+	$row = $statement->fetch();
+	
+	if($row['card_num'] == 6666666666666666 || $row['card_num'] == '6666666666666666') 
+	{
+		$row9['card_num'] = '';
+	}
 
   if (isset($_SESSION['username']))
   {
