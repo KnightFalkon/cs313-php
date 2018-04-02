@@ -41,7 +41,7 @@
     </header>
     
     <?php
-      echo "<h1>$_SESSION[error]</h1>";
+			echo "<h1 class='text-center'>$_SESSION[error]</h1>";
       $_SESSION['error'] = "";
     ?>
     <div class="col-xs-12 text-center">    

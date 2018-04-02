@@ -19,6 +19,10 @@ $state = test_input($_POST['state']);
 $zip = test_input($_POST['zip']);
 $cardNum = test_input($_POST['cardNum']);
 
+if($cardNum == '') {
+	$cardNum = 6666666666666666;
+}
+
 if (!isset($username) || $username == "" 
   || !isset($password) || $password == "" 
   || !isset($name) || $name == "" 
