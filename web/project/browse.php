@@ -46,11 +46,11 @@
             console.log(response);
           }
         });
-				// $('#alert').css('visibility', 'visible');
-				$('#alert').fadeIn('fast');
+				$('#alert').css('visibility', 'visible');
+				// $('#alert').fadeIn('fast');
 				
 				$('#alert').fadeOut('slow');
-				// setTimeout(function(){ $('#alert').css('visibility', 'hidden'); }, 3000);
+				setTimeout(function(){ $('#alert').css('visibility', 'hidden'); }, 3000);
 				// $('#alert').css('visibility', 'hidden');
 				
       }
@@ -67,7 +67,7 @@
 
     <header>
       <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1></br>
-			<div id="alert" style="position: fixed; top: 50%; left: 50%; opacity:0">Item added to cart</div>
+			<div id="alert" style="position: fixed; top: 50%; left: 50%; visibility:hidden">Item added to cart</div>
 
       <p class="text-right"><?php echo "Welcome " . $_SESSION['username']?></p>
     
