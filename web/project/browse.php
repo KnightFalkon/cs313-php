@@ -47,7 +47,7 @@
           }
         });
 				$('#alert').css('visibility', 'visible');
-				// $('#alert').fadeOut('slow');
+				$('#alert').fadeOut('slow');
 				// $('#alert').css('visibility', 'hidden');
 				
       }
