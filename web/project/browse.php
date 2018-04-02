@@ -46,9 +46,10 @@
             console.log(response);
           }
         });
-
-				$('body').append('<div id="alert" style="position: fixed; top: 50%; left: 50%;">Item added to cart</div>');
-				$('#alert').fadeOut('slow')
+				$('#alert').css('visibility', 'visible');
+				$('#alert').fadeOut('slow');
+				$('#alert').css('visibility', 'hidden');
+				
       }
 
 			function handleSelect(elm)
@@ -63,6 +64,7 @@
 
     <header>
       <h1 class="text-center title"> <span class="red">Rager</span>Gamer</h1></br>
+			<div id="alert" style="position: fixed; top: 50%; left: 50%;visibility: hidden;">Item added to cart</div>
 
       <p class="text-right"><?php echo "Welcome " . $_SESSION['username']?></p>
     
