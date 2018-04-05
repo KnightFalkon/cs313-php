@@ -58,8 +58,9 @@ else
         <a href="logout.php">Logout</a> -->
 				<select name="navbar" onchange="javascript:handleSelect(this)">
 					<option value="">Navigation</option>
-					<option value="account.php">Account</option>
+					<option value="browse.php">Browse</option>
 					<option value="cart.php">Cart</option>
+					<option value="Account.php">Account</option>
 					<option value="logout.php">Logout</option>
 				</select>
         
